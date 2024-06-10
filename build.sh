@@ -27,7 +27,8 @@ gpgkey=https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
 EOM
 
 rpm-ostree override remove \
-    ptyxis fish devpod lxc lxd-agent lxd p7zip-plugins p7zip podman-compose podman-tui podmansh
+    fish plasma-wallpapers-dynamic-builder-fish-completion \
+    ptyxis devpod lxc lxd-agent lxd p7zip podman-compose podman-tui podmansh
 
 # this installs a package from fedora repos
 rpm-ostree install \
