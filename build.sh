@@ -25,7 +25,7 @@ EOM
 
 # this installs a package from fedora repos
 rpm-ostree install \
-    screen tailscale \
+    screen tailscale fira-code-fonts \
     libxcrypt-compat google-cloud-cli
 
 systemctl enable docker.socket docker.service
@@ -57,10 +57,3 @@ systemctl mask podman.socket
 #     org.kde.konsole \
 #     org.signal.Signal \
 #     us.zoom.Zoom
-
-# install nerd fonts
-git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
-cd nerd-fonts
-./install.sh FiraCode
-cd ..
-rm -rf nerd-fonts
