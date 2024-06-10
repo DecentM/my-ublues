@@ -13,7 +13,15 @@ export RELEASE
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # add gcloud-cli repo
-rpm-ostree install https://packages.cloud.google.com/yum/repos/cloud-sdk-el9-x86_64
+tee -a /etc/yum.repos.d/google-cloud-sdk.repo <<EOM
+[google-cloud-cli]
+name=Google Cloud CLI
+baseurl=https://packages.cloud.google.com/yum/repos/cloud-sdk-el9-x86_64
+enabled=1
+gpgcheck=1
+repo_gpgcheck=0
+gpgkey=https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+EOM
 
 # this installs a package from fedora repos
 rpm-ostree install \
