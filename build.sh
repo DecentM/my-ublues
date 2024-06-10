@@ -33,15 +33,15 @@ systemctl enable docker.socket docker.service
 systemctl disable podman.socket
 systemctl mask podman.socket
 
-flatpak uninstall -y \
-    io.github.flattool.Warehouse \
-    org.fedoraproject.MediaWriter \
-    org.gnome.DejaDup \
-    org.gnome.world.PikaBackup \
-    org.kde.haruna \
-    org.kde.kclock \
-    org.kde.kweather \
-    org.mozilla.Thunderbird
+# flatpak uninstall -y \
+#     io.github.flattool.Warehouse \
+#     org.fedoraproject.MediaWriter \
+#     org.gnome.DejaDup \
+#     org.gnome.world.PikaBackup \
+#     org.kde.haruna \
+#     org.kde.kclock \
+#     org.kde.kweather \
+#     org.mozilla.Thunderbird
 
 flatpak install -y \
     com.anydesk.Anydesk \
