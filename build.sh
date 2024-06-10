@@ -5,6 +5,9 @@ set -ouex pipefail
 RELEASE="$(rpm -E %fedora)"
 export RELEASE
 
+mkdir -p "/tmp/build-${RELEASE}"
+cd "/tmp/build-${RELEASE}"
+
 ### Install packages
 
 # Packages can be installed from any enabled yum repo on the image.
@@ -23,15 +26,15 @@ repo_gpgcheck=0
 gpgkey=https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
 EOM
 
+rpm-ostree override remove \
+    ptyxis fish devpod lxc lxd-agent lxd p7zip-plugins p7zip podman-compose podman-tui podmansh
+
 # this installs a package from fedora repos
 rpm-ostree install \
-    screen tailscale fira-code-fonts \
+    screen \
     libxcrypt-compat google-cloud-cli
 
 systemctl enable docker.socket docker.service
-
-systemctl disable podman.socket
-systemctl mask podman.socket
 
 # flatpak uninstall -y \
 #     io.github.flattool.Warehouse \
