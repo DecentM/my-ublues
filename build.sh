@@ -30,7 +30,7 @@ rpm-ostree install \
 
 systemctl enable docker.socket docker.service
 
-systemctl disable podman.socket kde-baloo.service
+systemctl disable podman.socket
 systemctl mask podman.socket
 
 flatpak uninstall -y \
