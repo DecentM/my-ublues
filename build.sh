@@ -43,20 +43,20 @@ systemctl mask podman.socket
 #     org.kde.kweather \
 #     org.mozilla.Thunderbird
 
-flatpak install -y \
-    com.anydesk.Anydesk \
-    com.bitwarden.desktop \
-    com.slack.Slack \
-    com.stremio.Stremio \
-    dev.vencord.Vesktop \
-    ee.ria.DigiDoc4 \
-    io.dbeaver.DBeaverCommunity \
-    io.github.slgobinath.SafeEyes \
-    net.cozic.joplin_desktop \
-    one.ablaze.Floorp \
-    org.kde.konsole \
-    org.signal.Signal \
-    us.zoom.Zoom
+# flatpak install -y \
+#     com.anydesk.Anydesk \
+#     com.bitwarden.desktop \
+#     com.slack.Slack \
+#     com.stremio.Stremio \
+#     dev.vencord.Vesktop \
+#     ee.ria.DigiDoc4 \
+#     io.dbeaver.DBeaverCommunity \
+#     io.github.slgobinath.SafeEyes \
+#     net.cozic.joplin_desktop \
+#     one.ablaze.Floorp \
+#     org.kde.konsole \
+#     org.signal.Signal \
+#     us.zoom.Zoom
 
 # install nerd fonts
 git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
