@@ -39,6 +39,19 @@ rpm-ostree install \
 
 systemctl enable docker.socket docker.service
 
+# Install AudioRelay
+mkdir audiorelay
+cd audiorelay
+
+wget https://dl.audiorelay.net/setups/linux/audiorelay-0.27.5.tar.gz -O audiorelay.tar.gz
+tar -xzf audiorelay.tar.gz
+rm -f audiorelay.tar.gz
+
+cd -
+
+mv audiorelay /usr/share/
+ln -s /usr/share/audiorelay/bin/AudioRelay /usr/bin/AudioRelay
+
 # flatpak uninstall -y \
 #     io.github.flattool.Warehouse \
 #     org.fedoraproject.MediaWriter \
