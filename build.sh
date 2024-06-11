@@ -26,17 +26,6 @@ repo_gpgcheck=0
 gpgkey=https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
 EOM
 
-# add gcloud-cli repo
-tee -a /etc/yum.repos.d/tuxedo.repo <<EOM
-[tuxedo]
-name=Tuxedo
-baseurl=https://rpm.tuxedocomputers.com/fedora/40/x86_64/base
-enabled=1
-gpgcheck=1
-repo_gpgcheck=0
-gpgkey=https://rpm.tuxedocomputers.com/fedora/40/0x54840598.pub.asc
-EOM
-
 rpm-ostree override remove \
     fish plasma-wallpapers-dynamic-builder-fish-completion \
     ptyxis devpod lxc lxd-agent lxd p7zip podman-compose podman-tui podmansh
@@ -44,8 +33,7 @@ rpm-ostree override remove \
 # this installs a package from fedora repos
 rpm-ostree install \
     screen tlp \
-    libxcrypt-compat google-cloud-cli \
-    tuxedo-control-center tuxedo-drivers
+    libxcrypt-compat google-cloud-cli
 
 systemctl enable docker.socket docker.service
 
