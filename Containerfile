@@ -49,7 +49,7 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 WORKDIR /tmp
 
 COPY build.sh ./build.sh
-COPY dotfiles/ ./
+COPY dotfiles ./dotfiles
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
