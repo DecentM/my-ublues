@@ -32,6 +32,9 @@ tee -a /etc/yum.repos.d/tuxedo.repo <<EOM
 name=Tuxedo
 baseurl=https://rpm.tuxedocomputers.com/fedora/40/x86_64/base
 enabled=1
+gpgcheck=1
+repo_gpgcheck=0
+gpgkey=https://rpm.tuxedocomputers.com/fedora/40/0x54840598.pub.asc
 EOM
 
 rpm-ostree override remove \
