@@ -15,7 +15,7 @@ cd "/tmp/build-${RELEASE}"
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-cp -a /tmp/dotfiles /var/opt/
+cp -a /tmp/dotfiles /usr/share/dotfiles
 
 # add gcloud-cli repo
 tee -a /etc/yum.repos.d/google-cloud-sdk.repo <<EOM
