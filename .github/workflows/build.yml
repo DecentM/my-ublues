@@ -20,6 +20,12 @@ env:
 
 jobs:
   build_push:
+    strategy:
+      matrix:
+        suffix:
+          - -dx-nvidia
+          - -dx
+
     name: Build and push image
     runs-on: ubuntu-latest
 
