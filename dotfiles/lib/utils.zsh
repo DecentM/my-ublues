@@ -19,12 +19,12 @@ vercmd() {
     fi
 
     command -v "$1" >/dev/null
-    local status=$?
+    local exitstatus=$?
 
     # Restore the errexit option
     if [ "$e_was_set" = true ]; then
         set -e
     fi
 
-    return $status
+    return $exitstatus
 }
