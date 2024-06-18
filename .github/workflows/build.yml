@@ -18,13 +18,15 @@ jobs:
     strategy:
       matrix:
         image:
-          - aurora-dx-nvidia:latest
-          - aurora-dx:latest
-          - ucore-hci:stable-zfs
+          - aurora
+
+        suffix:
+          - -dx-nvidia
+          - -dx
 
     env:
-      MY_IMAGE_NAME: "${{ matrix.image }}" # the name of the image produced by this build, matches repo names
-      MY_IMAGE_DESC: "My customised ${{ matrix.image }} image"
+      MY_IMAGE_NAME: "${{ matrix.image }}${{ matrix.suffix }}" # the name of the image produced by this build, matches repo names
+      MY_IMAGE_DESC: "My customised ${{ matrix.image }} image (${{ matrix.suffix }})"
       IMAGE_REGISTRY: "ghcr.io/${{ github.repository_owner }}" # do not edit
 
     name: Build and push image
@@ -109,6 +111,7 @@ jobs:
           oci: false
           build-args: |
             SOURCE_IMAGE=${{ matrix.image }}
+            SOURCE_SUFFIX=${{ matrix.suffix }}
 
       # Workaround bug where capital letters in your GitHub username make it impossible to push to GHCR.
       # https://github.com/macbre/push-to-ghcr/issues/12
