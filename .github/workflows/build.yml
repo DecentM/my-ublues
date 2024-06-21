@@ -29,6 +29,9 @@ jobs:
           - image: ucore-hci
             tag: stable-nvidia-zfs
             build_script: build-server.sh
+          - image: ucore-hci
+            tag: stable-zfs
+            build_script: build-server.sh
 
     env:
       MY_IMAGE_NAME: "${{ matrix.image }}" # the name of the image produced by this build, matches repo names
