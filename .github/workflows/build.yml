@@ -22,10 +22,13 @@ jobs:
         include:
           - image: aurora-dx-nvidia
             tag: latest
+            build_script: build-desktop.sh
           - image: aurora-dx
             tag: latest
+            build_script: build-desktop.sh
           - image: ucore-hci
             tag: stable-nvidia-zfs
+            build_script: build-server.sh
 
     env:
       MY_IMAGE_NAME: "${{ matrix.image }}" # the name of the image produced by this build, matches repo names
@@ -115,6 +118,7 @@ jobs:
           build-args: |
             SOURCE_IMAGE=${{ matrix.image }}
             SOURCE_TAG=${{ matrix.tag }}
+            BUILD_SCRIPT=${{ matrix.build_script }}
 
       # Workaround bug where capital letters in your GitHub username make it impossible to push to GHCR.
       # https://github.com/macbre/push-to-ghcr/issues/12

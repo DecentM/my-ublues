@@ -50,7 +50,9 @@ COPY rootfs /
 
 WORKDIR /tmp
 
-COPY build.sh ./build.sh
+ARG BUILD_SCRIPT
+
+COPY ${BUILD_SCRIPT} ./build.sh
 COPY dotfiles ./dotfiles
 
 RUN mkdir -p /var/lib/alternatives && /tmp/build.sh && ostree container commit

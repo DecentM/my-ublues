@@ -34,7 +34,7 @@ rpm-ostree override remove \
 
 # this installs a package from fedora repos
 rpm-ostree install \
-    screen tlp iftop sshpass \
+    screen tlp iftop sshpass java-latest-openjdk \
     libxcrypt-compat google-cloud-cli
 
 systemctl enable docker.socket docker.service
