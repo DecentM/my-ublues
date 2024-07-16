@@ -30,5 +30,5 @@ EOM
 
 # this installs a package from fedora repos
 rpm-ostree install \
-    screen iftop sshpass mosh \
+    screen iftop sshpass mosh zoxide \
     libxcrypt-compat google-cloud-cli
