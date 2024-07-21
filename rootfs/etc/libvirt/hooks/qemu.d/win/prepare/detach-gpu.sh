@@ -1,0 +1,1 @@
+/etc/libvirt/hooks/lib/gpu/detach-from-host.sh

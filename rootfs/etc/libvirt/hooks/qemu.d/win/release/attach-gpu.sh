@@ -1,0 +1,1 @@
+/etc/libvirt/hooks/lib/gpu/attach-to-host.sh
