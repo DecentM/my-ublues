@@ -17,6 +17,8 @@ echo efi-framebuffer.0 >/sys/bus/platform/drivers/efi-framebuffer/unbind
 # Unload AMD kernel module
 # modprobe -r amdgpu
 
+modprobe -r nouveau
+
 # Detach GPU devices from host
 # Use your GPU and HDMI Audio PCI host device
 virsh nodedev-detach pci_0000_07_00_0

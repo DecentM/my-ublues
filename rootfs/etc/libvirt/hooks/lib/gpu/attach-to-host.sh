@@ -21,6 +21,8 @@ echo "efi-framebuffer.0" >/sys/bus/platform/drivers/efi-framebuffer/bind
 # modprobe nvidia_uvm
 # modprobe nvidia
 
+modprobe nouveau
+
 # Bind VTconsoles: might not be needed
 echo 1 >/sys/class/vtconsole/vtcon0/bind
 echo 1 >/sys/class/vtconsole/vtcon1/bind
