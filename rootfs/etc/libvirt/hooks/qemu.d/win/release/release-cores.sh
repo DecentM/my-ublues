@@ -1,0 +1,1 @@
+/etc/libvirt/hooks/lib/cpu/release-cores.sh
