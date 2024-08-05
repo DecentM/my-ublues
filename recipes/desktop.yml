@@ -1,0 +1,106 @@
+# image will be published to ghcr.io/<user>/<name>
+name: template
+# description will be included in the image's metadata
+description: This is my personal OS image.
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/aurora-dx
+image-version: 40 # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - type: files
+    files:
+      - source: system
+        destination:
+          / # copies files/system/* (* means everything inside it) into your image's root folder /
+          # put configuration files you want in /usr/etc/ inside the image
+          # while putting files in /etc/ is done on booted system by system administrators.
+          # read more about this in files module reference.
+
+  - type: rpm-ostree
+    repos:
+      # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://packages.cloud.google.com/yum/repos/cloud-sdk-el9-x86_64
+    install:
+      # - micro
+      # - starship
+      - screen
+      - tlp
+      - iftop
+      - sshpass
+      - java-latest-openjdk
+      - mosh
+      - zoxide
+      - libxcrypt-compat
+      - google-cloud-cli
+    remove:
+      # example: removing firefox (in favor of the flatpak)
+      # "firefox" is the main package, "firefox-langpacks" is a dependency
+      # - firefox
+      # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+      - fish
+      - plasma-wallpapers-dynamic-builder-fish-completion
+      - ptyxis
+      - devpod
+      - lxc
+      - lxd-agent
+      - lxd
+      - p7zip
+      - podman-compose
+      - podman-tui
+      - podmansh
+
+  - type: default-flatpaks
+    notify: true # Send notification after install/uninstall is finished (true/false)
+    system:
+      # If no repo information is specified, Flathub will be used by default
+      # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      # repo-name: flathub
+      # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      install:
+        # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
+        - app.organicmaps.desktop
+        - com.anydesk.Anydesk
+        - com.bitwarden.desktop
+        - com.discordapp.Discord
+        - com.github.tchx84.Flatseal
+        - com.obsproject.Studio
+        - com.slack.Slack
+        - com.stremio.Stremio
+        - dev.deedles.Trayscale
+        - ee.ria.qdigidoc4
+        - fr.handbrake.ghb
+        - io.dbeaver.DBeaverCommunity
+        - io.github.Foldex.AdwSteamGtk
+        - io.github.dvlv.boxbuddyrs
+        - io.github.martchus.syncthingtray
+        - io.github.slgobinath.SafeEyes
+        - io.httpie.Httpie
+        - io.missioncenter.MissionCenter
+        - net.cozic.joplin_desktop
+        - one.ablaze.floorp
+        - org.gnome.Firmware
+        - org.kde.filelight
+        - org.kde.gwenview
+        - org.kde.kcachegrind
+        - org.kde.kcalc
+        - org.kde.kleopatra
+        - org.kde.konsole
+        - org.kde.kontact
+        - org.kde.krita
+        - org.kde.okteta
+        - org.kde.okular
+        - org.kde.yakuake
+        - org.onlyoffice.desktopeditors
+        - org.signal.Signal
+        - org.videolan.VLC
+        - us.zoom.Zoom
+      # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
+      # only normal flatpak applications are (like Floorp Lightning web browser in this example).
+      # Installing different branches of the same Flatpak is not supported.
+      remove:
+      # - org.gnome.eog
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
