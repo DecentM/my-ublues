@@ -46,7 +46,7 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}:${SOURCE_TAG}
 ## make modifications desired in your image and install packages by modifying the build.sh script
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
-COPY files /
+COPY files/system /
 
 WORKDIR /tmp
 
