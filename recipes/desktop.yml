@@ -22,7 +22,7 @@ modules:
   - type: rpm-ostree
     repos:
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
-      - https://packages.cloud.google.com/yum/repos/cloud-sdk-el9-x86_64
+      #- https://packages.cloud.google.com/yum/repos/cloud-sdk-el9-x86_64
     install:
       # - micro
       # - starship
@@ -33,8 +33,8 @@ modules:
       - java-latest-openjdk
       - mosh
       - zoxide
-      - libxcrypt-compat
-      - google-cloud-cli
+      #- libxcrypt-compat
+      #- google-cloud-cli
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
