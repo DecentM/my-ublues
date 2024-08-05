@@ -1,0 +1,44 @@
+type: default-flatpaks
+notify: true # Send notification after install/uninstall is finished (true/false)
+system:
+  # If no repo information is specified, Flathub will be used by default
+  # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+  # repo-name: flathub
+  # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+  install:
+    # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
+    - app.organicmaps.desktop
+    - com.anydesk.Anydesk
+    - com.bitwarden.desktop
+    - com.discordapp.Discord
+    - com.obsproject.Studio
+    - com.slack.Slack
+    - com.stremio.Stremio
+    - dev.deedles.Trayscale
+    - ee.ria.qdigidoc4
+    - fr.handbrake.ghb
+    - io.dbeaver.DBeaverCommunity
+    - io.github.Foldex.AdwSteamGtk
+    - io.github.dvlv.boxbuddyrs
+    - io.github.martchus.syncthingtray
+    - io.github.slgobinath.SafeEyes
+    - io.httpie.Httpie
+    - io.missioncenter.MissionCenter
+    - net.cozic.joplin_desktop
+    - one.ablaze.floorp
+    - org.gnome.Firmware
+    - org.kde.filelight
+    - org.kde.gwenview
+    - org.kde.kcachegrind
+    - org.kde.kcalc
+    - org.kde.kleopatra
+    - org.kde.konsole
+    - org.kde.kontact
+    - org.kde.krita
+    - org.kde.okteta
+    - org.kde.okular
+    - org.kde.yakuake
+    - org.onlyoffice.desktopeditors
+    - org.signal.Signal
+    - org.videolan.VLC
+    - us.zoom.Zoom
