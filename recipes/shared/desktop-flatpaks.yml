@@ -32,7 +32,6 @@ system:
     - org.kde.kcachegrind
     - org.kde.kcalc
     - org.kde.kleopatra
-    - org.kde.konsole
     - org.kde.kontact
     - org.kde.krita
     - org.kde.okteta

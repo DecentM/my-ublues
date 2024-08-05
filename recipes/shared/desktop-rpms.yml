@@ -30,4 +30,3 @@ remove:
   - podman-compose
   - podman-tui
   - podmansh
-  - konsole
