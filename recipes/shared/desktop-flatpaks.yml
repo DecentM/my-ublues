@@ -48,7 +48,6 @@ system:
   remove:
     - io.github.flattool.Warehouse
     - org.gnome.DejaDup
-    - org.gnome.world.PikaBackup
     - org.kde.haruna
     - org.kde.kclock
     - org.kde.kweather
