@@ -1,5 +1,5 @@
 # image will be published to ghcr.io/<user>/<name>
-name: ucore-hci
+name: ucore-hci-nvidia
 # description will be included in the image's metadata
 description: This is my personal OS image for my servers.
 
