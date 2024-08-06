@@ -33,12 +33,6 @@ jobs:
           - server
           - server-nvidia
 
-        arch:
-          - x86_64
-
-        version:
-          - 40
-
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
@@ -52,6 +46,33 @@ jobs:
           # enabled by default, disable if your image is small and you want faster builds
           maximize_build_space: true
 
+  iso:
+    name: Build ISO
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+
+    needs:
+      - bluebuild
+
+    strategy:
+      fail-fast: false # stop GH from cancelling all matrix builds if one fails
+
+      matrix:
+        arch:
+          - x86_64
+
+        version:
+          - 40
+
+        variant:
+          - fedora-release-kinoite-40-38.noarch
+
+    steps:
       - name: Build ISO
         uses: jasonn3/build-container-installer@main
         id: build
@@ -61,8 +82,8 @@ jobs:
           image_name: aurora-dx
           image_repo: ghcr.io/decentm
           image_tag: latest
-          version: 40
-          variant: fedora-release-kinoite-40-38.noarch
+          version: ${{ matrix.version }}
+          variant: ${{ matrix.variant }}
           iso_name: aurora-dx-latest-${{ matrix.version }}.iso
 
       # This example is for uploading your ISO as a Github artifact. You can do something similar using any cloud storage, so long as you copy the output
