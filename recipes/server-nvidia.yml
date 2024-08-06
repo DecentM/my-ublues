@@ -10,8 +10,7 @@ image-version: stable-nvidia-zfs # latest is also supported if you want new upda
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - from-file: shared/rootfs-files.yml
-
   - from-file: shared/cli-tools.yml
+  - from-file: shared/rootfs-files.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
