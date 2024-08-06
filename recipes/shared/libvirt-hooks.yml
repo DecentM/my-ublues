@@ -1,6 +1,6 @@
 type: files
 files:
-  - source: system
+  - source: libvirt-hooks
     destination:
       / # copies files/system/* (* means everything inside it) into your image's root folder /
       # put configuration files you want in /usr/etc/ inside the image
