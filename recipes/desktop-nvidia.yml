@@ -1,7 +1,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: aurora-dx-nvidia
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: This is my personal OS image with Nvidia blobs.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/aurora-dx-nvidia
@@ -13,6 +13,7 @@ modules:
   - from-file: shared/rootfs-files.yml
 
   - from-file: shared/desktop-rpms.yml
+  - from-file: shared/cli-tools.yml
 
   - from-file: shared/desktop-flatpaks.yml
 

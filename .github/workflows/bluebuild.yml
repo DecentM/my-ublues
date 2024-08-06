@@ -28,9 +28,10 @@ jobs:
 
       matrix:
         recipe:
-          # !! Add your recipes here
           - desktop.yml
           - desktop-nvidia.yml
+          - server.yml
+          - server-nvidia.yml
 
     steps:
       # the build is fully handled by the reusable github action

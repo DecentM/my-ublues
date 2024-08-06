@@ -1,5 +1,7 @@
 type: default-flatpaks
+
 notify: true # Send notification after install/uninstall is finished (true/false)
+
 system:
   # If no repo information is specified, Flathub will be used by default
   # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -41,3 +43,13 @@ system:
     - org.signal.Signal
     - org.videolan.VLC
     - us.zoom.Zoom
+    - org.fedoraproject.MediaWriter
+
+  remove:
+    - io.github.flattool.Warehouse
+    - org.gnome.DejaDup
+    - org.gnome.world.PikaBackup
+    - org.kde.haruna
+    - org.kde.kclock
+    - org.kde.kweather
+    - org.mozilla.Thunderbird
