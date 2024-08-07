@@ -43,6 +43,11 @@ jobs:
             variant: fedora-release-kinoite-40-38.noarch
             version: 40
 
+          - recipe: laptop
+            arch: x86_64
+            variant: fedora-release-kinoite-40-38.noarch
+            version: 40
+
           - recipe: k8s-node
             arch: x86_64
             variant: fedora-release-coreos-40-38.noarch

@@ -19,7 +19,10 @@ modules:
   - from-file: shared/tools/general-cli.yml
 
   # Software
-  - from-file: shared/flatpaks.yml
+  - from-file: shared/flatpaks/integrated.yml
+  - from-file: shared/flatpaks/video-prod.yml
+  - from-file: shared/flatpaks/thirdparty.yml
+  - from-file: shared/flatpaks/work.yml
 
   # Files
   - from-file: shared/dotfiles.yml

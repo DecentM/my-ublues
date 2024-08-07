@@ -10,25 +10,8 @@ user:
 
   install:
     # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
-    - app.organicmaps.desktop
-    - com.anydesk.Anydesk
-    - com.bitwarden.desktop
-    - com.discordapp.Discord
-    - com.obsproject.Studio
-    - com.slack.Slack
-    - com.stremio.Stremio
-    - dev.deedles.Trayscale
-    - ee.ria.qdigidoc4
-    - fr.handbrake.ghb
-    - io.dbeaver.DBeaverCommunity
-    - io.github.Foldex.AdwSteamGtk
     - io.github.dvlv.boxbuddyrs
-    - io.github.martchus.syncthingtray
-    - io.github.slgobinath.SafeEyes
-    - io.httpie.Httpie
     - io.missioncenter.MissionCenter
-    - net.cozic.joplin_desktop
-    - one.ablaze.floorp
     - org.gnome.Firmware
     - org.kde.filelight
     - org.kde.gwenview
@@ -40,8 +23,4 @@ user:
     - org.kde.okteta
     - org.kde.okular
     - org.kde.yakuake
-    - org.onlyoffice.desktopeditors
-    - org.signal.Signal
-    - org.videolan.VLC
-    - us.zoom.Zoom
     - org.fedoraproject.MediaWriter
