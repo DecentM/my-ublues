@@ -1,0 +1,17 @@
+type: rpm-ostree
+
+remove:
+  # example: removing firefox (in favor of the flatpak)
+  # "firefox" is the main package, "firefox-langpacks" is a dependency
+  # - firefox
+  # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+  - fish
+  - plasma-wallpapers-dynamic-builder-fish-completion
+  - ptyxis
+  - lxc
+  - lxd-agent
+  - lxd
+  - p7zip
+  - podman-compose
+  - podman-tui
+  - podmansh
