@@ -1,0 +1,4 @@
+type: rpm-ostree
+
+install:
+  - java-latest-openjdk

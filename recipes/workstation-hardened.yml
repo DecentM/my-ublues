@@ -1,5 +1,5 @@
 # image will be published to ghcr.io/<user>/<name>
-name: workstation
+name: workstation-hardened
 # description will be included in the image's metadata
 description: This is my personal OS image with nouveau (testing hardened version from Secureblue).
 
@@ -10,12 +10,18 @@ image-version: latest # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
+  # Cleanup
   - from-file: shared/cleanup/aurora-hardened.yml
+  - from-file: shared/cleanup/aurora-flatpaks.yml
 
-  - from-file: shared/desktop-rpms.yml
-  - from-file: shared/cli-tools.yml
+  # Tools
+  - from-file: shared/tools/dotfiles-dependencies.yml
+  - from-file: shared/tools/general-cli.yml
 
-  - from-file: shared/desktop-flatpaks.yml
+  # Software
+  - from-file: shared/flatpaks.yml
+
+  # Files
   - from-file: shared/dotfiles.yml
   - from-file: shared/libvirt-hooks.yml
 

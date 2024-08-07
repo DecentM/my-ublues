@@ -10,12 +10,18 @@ image-version: latest # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
+  # Cleanup
   - from-file: shared/cleanup/aurora-dx.yml
+  - from-file: shared/cleanup/aurora-flatpaks.yml
 
-  - from-file: shared/desktop-rpms.yml
-  - from-file: shared/cli-tools.yml
+  # Tools
+  - from-file: shared/tools/dotfiles-dependencies.yml
+  - from-file: shared/tools/general-cli.yml
 
-  - from-file: shared/desktop-flatpaks.yml
+  # Software
+  - from-file: shared/flatpaks.yml
+
+  # Files
   - from-file: shared/dotfiles.yml
   - from-file: shared/libvirt-hooks.yml
 
