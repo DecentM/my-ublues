@@ -1,16 +1,20 @@
 # image will be published to ghcr.io/<user>/<name>
-name: ucore-hci
+name: workstation
 # description will be included in the image's metadata
-description: This is my personal OS image for my servers.
+description: This is my personal OS image with nouveau (testing hardened version from Secureblue).
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/ucore-hci
-image-version: stable-zfs # latest is also supported if you want new updates ASAP
+base-image: ghcr.io/secureblue/aurora-main-hardened
+image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
+  - from-file: shared/desktop-rpms.yml
   - from-file: shared/cli-tools.yml
+
+  - from-file: shared/desktop-flatpaks.yml
   - from-file: shared/dotfiles.yml
+  - from-file: shared/libvirt-hooks.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

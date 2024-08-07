@@ -27,11 +27,21 @@ jobs:
       fail-fast: false # stop GH from cancelling all matrix builds if one fails
 
       matrix:
-        recipe:
-          - desktop
-          - desktop-nvidia
-          - server
-          - server-nvidia
+        include:
+          - recipe: workstation
+            arch: x86_64
+
+          - recipe: workstation-nvidia
+            arch: x86_64
+
+          - recipe: workstation-hardened
+            arch: x86_64
+
+          - recipe: k8s-node
+            arch: x86_64
+
+          - recipe: k8s-node-nvidia
+            arch: x86_64
 
     steps:
       # the build is fully handled by the reusable github action
@@ -46,45 +56,18 @@ jobs:
           # enabled by default, disable if your image is small and you want faster builds
           maximize_build_space: true
 
-  iso:
-    name: Build ISO
-
-    runs-on: ubuntu-latest
-
-    permissions:
-      contents: read
-      packages: write
-      id-token: write
-
-    needs:
-      - bluebuild
-
-    strategy:
-      fail-fast: false # stop GH from cancelling all matrix builds if one fails
-
-      matrix:
-        arch:
-          - x86_64
-
-        version:
-          - 40
-
-        variant:
-          - fedora-release-kinoite-40-38.noarch
-
-    steps:
       - name: Build ISO
         uses: jasonn3/build-container-installer@main
         id: build
         with:
           arch: ${{ matrix.arch }}
           enrollment_password: ${{ secrets.ENROLLMENT_PASSWORD }}
-          image_name: aurora-dx
+          image_name: ${{ matrix.recipe }}
           image_repo: ghcr.io/decentm
           image_tag: latest
-          version: ${{ matrix.version }}
-          variant: ${{ matrix.variant }}
-          iso_name: aurora-dx-latest-${{ matrix.version }}.iso
+          version: latest
+          iso_name: ${{ matrix.recipe }}-latest-${{ matrix.arch }}.iso
+          web_ui: true
 
       # This example is for uploading your ISO as a Github artifact. You can do something similar using any cloud storage, so long as you copy the output
       - name: Upload ISO as artifact

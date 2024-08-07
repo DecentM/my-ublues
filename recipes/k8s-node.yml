@@ -1,11 +1,11 @@
 # image will be published to ghcr.io/<user>/<name>
-name: ucore-hci-nvidia
+name: k8s-node
 # description will be included in the image's metadata
-description: This is my personal OS image for my servers.
+description: This is my personal OS image for nodes in my k8s cluster.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/ucore-hci
-image-version: stable-nvidia-zfs # latest is also supported if you want new updates ASAP
+image-version: stable-zfs # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
