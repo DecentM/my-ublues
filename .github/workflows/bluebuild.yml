@@ -30,18 +30,28 @@ jobs:
         include:
           - recipe: workstation
             arch: x86_64
+            variant: fedora-release-kinoite-40-38.noarch
+            version: 40
 
           - recipe: workstation-nvidia
             arch: x86_64
+            variant: fedora-release-kinoite-40-38.noarch
+            version: 40
 
           - recipe: workstation-hardened
             arch: x86_64
+            variant: fedora-release-kinoite-40-38.noarch
+            version: 40
 
           - recipe: k8s-node
             arch: x86_64
+            variant: fedora-release-coreos-40-38.noarch
+            version: 40
 
           - recipe: k8s-node-nvidia
             arch: x86_64
+            variant: fedora-release-coreos-40-38.noarch
+            version: 40
 
     steps:
       # the build is fully handled by the reusable github action
@@ -65,8 +75,9 @@ jobs:
           image_name: ${{ matrix.recipe }}
           image_repo: ghcr.io/decentm
           image_tag: latest
-          version: latest
+          version: ${{ matrix.version }}
           iso_name: ${{ matrix.recipe }}-latest-${{ matrix.arch }}.iso
+          variant: ${{ matrix.variant }}
           web_ui: true
 
       # This example is for uploading your ISO as a Github artifact. You can do something similar using any cloud storage, so long as you copy the output
