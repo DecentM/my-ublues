@@ -1,0 +1,31 @@
+# https://gist.github.com/codello/118ad0562bfd91e90d5914a9e2dbe606
+
+type: script
+
+snippets:
+  # The CRICTL_VERSION must match the tag name on GitHub.
+  # See https://github.com/kubernetes-sigs/cri-tools/releases
+  #  - CRICTL_VERSION=v1.18.0
+  # cri-o Versions.
+  # See https://github.com/cri-o/cri-o/releases
+  #  - CRIO_VERSION=1.18.1
+  #  - CRIO_REPO_VERSION="${CRIO_VERSION%.*}"
+
+  #  - curl -fsSL -o /etc/yum.repos.d/devel:kubic:libcontainers:stable.repo https://download.opensuse.org/repositories/devel:kubic:libcontainers:stable/CentOS_7/devel:kubic:libcontainers:stable.repo
+  #  - curl -fsSL -o /etc/yum.repos.d/devel:kubic:libcontainers:stable:cri-o:$CRIO_REPO_VERSION.repo https://download.opensuse.org/repositories/devel:kubic:libcontainers:stable:cri-o:$CRIO_REPO_VERSION/CentOS_7/devel:kubic:libcontainers:stable:cri-o:$CRIO_REPO_VERSION.repo
+
+  # Kernel modules required by the cri-o container engine.
+  - |
+    tee /etc/modules-load.d/crio-net.conf << EOF > /dev/null
+    overlay
+    br_netfilter
+    EOF
+
+  - |
+    tee /etc/sysctl.d/99-kubernetes-cri.conf <<- EOF > /dev/null
+    net.bridge.bridge-nf-call-iptables  = 1
+    net.ipv4.ip_forward                 = 1
+    net.bridge.bridge-nf-call-ip6tables = 1
+    EOF
+
+#  - sysctl --system

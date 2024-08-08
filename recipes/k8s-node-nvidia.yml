@@ -13,7 +13,9 @@ modules:
   - from-file: shared/tools/general-cli.yml
   - from-file: shared/dotfiles.yml
 
-  - from-file: shared/k8s/cli-tools.yml
-  - from-file: shared/k8s/services.yml
+  - from-file: shared/k8s/disable-selinux.yml
+
+  - from-file: shared/k8s/kube-clis.yml
+  - from-file: shared/k8s/systemd.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
