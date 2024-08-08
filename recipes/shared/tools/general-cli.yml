@@ -7,3 +7,4 @@ install:
   - screen
   - iftop
   - mosh
+  - powertop

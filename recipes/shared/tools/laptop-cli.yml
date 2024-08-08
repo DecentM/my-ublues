@@ -5,3 +5,4 @@ repos:
 
 install:
   - tlp
+  - tlp-rdw
