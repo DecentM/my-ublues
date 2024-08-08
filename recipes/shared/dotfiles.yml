@@ -1,8 +1,6 @@
-type: files
-files:
-  - source: dotfiles
-    destination:
-      / # copies files/system/* (* means everything inside it) into your image's root folder /
-      # put configuration files you want in /usr/etc/ inside the image
-      # while putting files in /etc/ is done on booted system by system administrators.
-      # read more about this in files module reference.
+type: chezmoi
+
+repository: "https://github.com/DecentM/dotfiles"
+all-users: true
+file-conflict-policy: replace # override changed files with those from the repo
+run-every: 6h
