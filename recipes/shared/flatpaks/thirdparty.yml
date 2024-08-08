@@ -13,7 +13,6 @@ system:
     - com.stremio.Stremio
     - dev.deedles.Trayscale
     - ee.ria.qdigidoc4
-    - io.github.Foldex.AdwSteamGtk
     - io.github.martchus.syncthingtray
     - io.github.slgobinath.SafeEyes
     - net.cozic.joplin_desktop
@@ -21,4 +20,3 @@ system:
     - org.onlyoffice.desktopeditors
     - org.signal.Signal
     - org.videolan.VLC
-    - us.zoom.Zoom

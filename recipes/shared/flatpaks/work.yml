@@ -10,3 +10,4 @@ system:
     - com.slack.Slack
     - io.dbeaver.DBeaverCommunity
     - io.httpie.Httpie
+    - us.zoom.Zoom
