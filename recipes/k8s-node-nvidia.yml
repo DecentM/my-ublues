@@ -14,6 +14,7 @@ modules:
 
   - from-file: shared/tools/general-cli.yml
   - from-file: shared/dotfiles.yml
+  - from-file: shared/sshable.yml
 
   - from-file: shared/k8s/disable-selinux.yml
 
