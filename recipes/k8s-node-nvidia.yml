@@ -10,6 +10,8 @@ image-version: stable-nvidia-zfs # latest is also supported if you want new upda
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
+  - from-file: shared/cleanup/coreos-installer.yml
+
   - from-file: shared/tools/general-cli.yml
   - from-file: shared/dotfiles.yml
 

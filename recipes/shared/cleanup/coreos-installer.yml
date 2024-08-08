@@ -1,0 +1,5 @@
+type: rpm-ostree
+
+remove:
+  - coreos-installer
+  - coreos-installer-bootinfra
