@@ -18,6 +18,7 @@ modules:
 
   - from-file: shared/k8s/disable-selinux.yml
 
+  - from-file: shared/k8s/kube-files.yml
   - from-file: shared/k8s/kube-clis.yml
   - from-file: shared/k8s/systemd.yml
 
