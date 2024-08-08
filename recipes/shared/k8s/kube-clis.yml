@@ -1,7 +1,6 @@
 type: rpm-ostree
 
 install:
-  - kubernetes-kubectl
-  - kubernetes-kubelet
+  - kubernetes
   - kubernetes-kubeadm
   - cri-o
