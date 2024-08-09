@@ -1,0 +1,27 @@
+modules:
+  # https://gist.github.com/codello/118ad0562bfd91e90d5914a9e2dbe606
+  - type: files
+    files:
+      - source: disable-selinux
+        destination: /
+
+  - type: files
+    files:
+      - source: kubernetes
+        destination: /
+
+  - type: rpm-ostree
+    remove:
+      - zram-generator
+      - firewalld
+    install:
+      - kubelet
+      - kubeadm
+      - kubectl
+      - cri-o
+
+  - type: systemd
+    system:
+      enabled:
+        - kubelet
+        - crio

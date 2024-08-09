@@ -1,7 +1,0 @@
-type: rpm-ostree
-
-install:
-  - kubelet
-  - kubeadm
-  - kubectl
-  - cri-o

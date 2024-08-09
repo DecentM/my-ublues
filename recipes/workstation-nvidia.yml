@@ -11,21 +11,19 @@ image-version: latest # latest is also supported if you want new updates ASAP
 # you can include multiple instances of the same module
 modules:
   # Cleanup
-  - from-file: shared/cleanup/aurora-dx.yml
-  - from-file: shared/cleanup/aurora-flatpaks.yml
+  - from-file: cleanup/aurora-dx.yml
 
   # Tools
-  - from-file: shared/tools/dotfiles-dependencies.yml
-  - from-file: shared/tools/general-cli.yml
+  - from-file: tools/general.yml
 
   # Software
-  - from-file: shared/flatpaks/integrated.yml
-  - from-file: shared/flatpaks/video-prod.yml
-  - from-file: shared/flatpaks/thirdparty.yml
-  - from-file: shared/flatpaks/work.yml
+  - from-file: flatpaks/integrated.yml
+  - from-file: flatpaks/video-prod.yml
+  - from-file: flatpaks/thirdparty.yml
+  - from-file: flatpaks/work.yml
 
   # Files
-  - from-file: shared/dotfiles.yml
-  - from-file: shared/libvirt-hooks.yml
+  - from-file: features/dotfiles.yml
+  - from-file: features/libvirt-hooks.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

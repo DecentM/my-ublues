@@ -10,18 +10,14 @@ image-version: stable-zfs # latest is also supported if you want new updates ASA
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - from-file: shared/cleanup/coreos-installer.yml
-  - from-file: shared/cleanup/firewalld.yml
-  - from-file: shared/cleanup/zram.yml
+  - from-file: cleanup/ucore.yml
 
-  - from-file: shared/tools/general-cli.yml
-  - from-file: shared/dotfiles.yml
-  - from-file: shared/sshable.yml
+  - from-file: tools/general.yml
 
-  - from-file: shared/disable-selinux.yml
+  - from-file: features/dotfiles.yml
+  - from-file: features/sshable.yml
 
-  - from-file: shared/k8s/kube-files.yml
-  - from-file: shared/k8s/kube-clis.yml
-  - from-file: shared/k8s/systemd.yml
+  - from-file: components/kubernetes.yml
+  - from-file: components/cockpit.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

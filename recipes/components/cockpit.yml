@@ -1,0 +1,30 @@
+modules:
+  # https://gist.github.com/codello/118ad0562bfd91e90d5914a9e2dbe606
+  - type: rpm-ostree
+    install:
+      - cockpit
+      - cockpit-machines
+      - cockpit-ostree
+      - cockpit-navigator
+
+  # cockpit-file-sharing
+  # cockpit-zfs-manager
+  - type: rpm-ostree
+    install:
+      - https://github.com/45Drives/cockpit-file-sharing/releases/download/v4.2.1/cockpit-file-sharing-4.2.1-1.el8.noarch.rpm
+      - https://github.com/45Drives/cockpit-zfs-manager/releases/download/v1.3.1/cockpit-zfs-manager-1.3.1-1.el8.noarch.rpm
+
+  # cockpit-sensors
+  - type: script
+    scripts: []
+    snippets:
+      - "wget https://github.com/ocristopfer/cockpit-sensors/releases/latest/download/cockpit-sensors.tar.xz"
+      - "tar -xf cockpit-sensors.tar.xz cockpit-sensors/dist"
+      - "mv cockpit-sensors/dist /usr/share/cockpit/sensors"
+      - "rm -r cockpit-sensors"
+      - "rm cockpit-sensors.tar.xz"
+
+  - type: systemd
+    system:
+      enabled:
+        - cockpit

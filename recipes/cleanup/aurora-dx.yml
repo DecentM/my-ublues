@@ -1,0 +1,25 @@
+modules:
+  - type: rpm-ostree
+    remove:
+      - fish
+      - plasma-wallpapers-dynamic-builder-fish-completion
+      - ptyxis
+      - devpod
+      - lxc
+      - lxd-agent
+      - lxd
+      - p7zip
+      - podman-compose
+      - podman-tui
+      - podmansh
+
+  - type: default-flatpaks
+    notify: true # Send notification after install/uninstall is finished (true/false)
+    system:
+      remove:
+        - io.github.flattool.Warehouse
+        - org.gnome.DejaDup
+        - org.kde.haruna
+        - org.kde.kclock
+        - org.kde.kweather
+        - org.mozilla.Thunderbird

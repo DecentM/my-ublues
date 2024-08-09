@@ -1,0 +1,11 @@
+modules:
+  - type: chezmoi
+    repository: "https://github.com/DecentM/dotfiles.git"
+    all-users: true
+    file-conflict-policy: replace # override changed files with those from the repo
+    run-every: 6h
+
+  - type: rpm-ostree
+    install:
+      - sshpass
+      - zoxide
