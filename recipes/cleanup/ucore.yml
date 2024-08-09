@@ -4,3 +4,4 @@ modules:
       - coreos-installer
       - coreos-installer-bootinfra
       - nano
+      - nano-default-editor

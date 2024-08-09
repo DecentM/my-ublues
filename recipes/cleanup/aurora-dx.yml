@@ -14,6 +14,7 @@ modules:
       - podmansh
       - podman
       - nano
+      - nano-default-editor
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
