@@ -8,9 +8,6 @@ modules:
       - cockpit-navigator
       # for cockpit-sensors
       - lm_sensors
-      # for cockpit-file-sharing
-      - samba-common-tools
-      - samba-winbind-clients
 
   - type: rpm-ostree
     repos:
@@ -18,12 +15,6 @@ modules:
     install:
       # for cockpit-zfs-manager
       - znapzend
-
-  # cockpit-file-sharing
-  # cockpit-identities
-  - type: rpm-ostree
-    install:
-      - https://github.com/45Drives/cockpit-file-sharing/releases/download/v4.2.1/cockpit-file-sharing-4.2.1-1.el8.noarch.rpm
 
   # cockpit-zfs-manager
   - type: script
