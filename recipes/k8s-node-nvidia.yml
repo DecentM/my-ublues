@@ -11,12 +11,13 @@ image-version: stable-nvidia-zfs # latest is also supported if you want new upda
 # you can include multiple instances of the same module
 modules:
   - from-file: shared/cleanup/coreos-installer.yml
+  - from-file: shared/cleanup/firewalld.yml
 
   - from-file: shared/tools/general-cli.yml
   - from-file: shared/dotfiles.yml
   - from-file: shared/sshable.yml
 
-  - from-file: shared/k8s/disable-selinux.yml
+  - from-file: shared/disable-selinux.yml
 
   - from-file: shared/k8s/kube-files.yml
   - from-file: shared/k8s/kube-clis.yml
