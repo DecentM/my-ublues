@@ -12,6 +12,7 @@ image-version: stable-nvidia-zfs # latest is also supported if you want new upda
 modules:
   - from-file: shared/cleanup/coreos-installer.yml
   - from-file: shared/cleanup/firewalld.yml
+  - from-file: shared/cleanup/zram.yml
 
   - from-file: shared/tools/general-cli.yml
   - from-file: shared/dotfiles.yml

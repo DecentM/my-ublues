@@ -12,6 +12,7 @@ image-version: stable-zfs # latest is also supported if you want new updates ASA
 modules:
   - from-file: shared/cleanup/coreos-installer.yml
   - from-file: shared/cleanup/firewalld.yml
+  - from-file: shared/cleanup/zram.yml
 
   - from-file: shared/tools/general-cli.yml
   - from-file: shared/dotfiles.yml
