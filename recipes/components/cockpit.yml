@@ -20,7 +20,7 @@ modules:
   - type: script
     scripts: []
     snippets:
-      - "wget https://github.com/ocristopfer/cockpit-sensors/releases/latest/download/cockpit-sensors.tar.xz"
+      - "curl -O https://github.com/ocristopfer/cockpit-sensors/releases/latest/download/cockpit-sensors.tar.xz"
       - "tar -xf cockpit-sensors.tar.xz cockpit-sensors/dist"
       - "mv cockpit-sensors/dist /usr/share/cockpit/sensors"
       - "rm -r cockpit-sensors"
