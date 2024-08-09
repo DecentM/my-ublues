@@ -3,3 +3,4 @@ modules:
     remove:
       - coreos-installer
       - coreos-installer-bootinfra
+      - nano

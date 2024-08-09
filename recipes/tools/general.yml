@@ -8,3 +8,5 @@ install:
   - iftop
   - mosh
   - powertop
+  - htop
+  - vim
