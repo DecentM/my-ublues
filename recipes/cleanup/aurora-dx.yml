@@ -12,7 +12,6 @@ modules:
       - podman-compose
       - podman-tui
       - podmansh
-      - podman
       - nano
       - nano-default-editor
 

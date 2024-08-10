@@ -5,3 +5,8 @@ modules:
       - coreos-installer-bootinfra
       - nano
       - nano-default-editor
+      - podman
+      - podman-compose
+      - bootc
+      - cockpit-podman
+      - toolbox
