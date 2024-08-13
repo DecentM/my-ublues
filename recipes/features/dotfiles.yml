@@ -7,5 +7,11 @@ modules:
 
   - type: rpm-ostree
     install:
+      - zsh
       - sshpass
       - zoxide
+
+  # TODO: setup zsh as default shell
+  - type: script
+    scripts: []
+    snippets: []
