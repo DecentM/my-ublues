@@ -1,13 +1,10 @@
-name: bluebuild
+name: isos
 
 on:
   schedule:
     - cron:
-        "00 06 * * *" # build at 06:00 UTC every day
+        "00 07 * * *" # build at 06:00 UTC every day
         # (20 minutes after last ublue images start building)
-  push:
-    paths-ignore: # don't rebuild if only documentation has changed
-      - "**.md"
 
   pull_request:
   workflow_dispatch: # allow manually triggering builds
@@ -70,14 +67,29 @@ jobs:
             maximize_build_space: false
 
     steps:
-      # the build is fully handled by the reusable github action
-      - name: Build Custom Image
-        uses: blue-build/github-action@v1.6
+      - name: Build ISO
+        uses: jasonn3/build-container-installer@main
+        id: build
         with:
-          recipe: ${{ matrix.recipe }}.yml
-          cosign_private_key: ${{ secrets.SIGNING_SECRET }}
-          registry_token: ${{ github.token }}
-          pr_event_number: ${{ github.event.number }}
+          arch: ${{ matrix.arch }}
+          enrollment_password: ${{ secrets.ENROLLMENT_PASSWORD }}
+          image_name: ${{ matrix.recipe }}
+          image_repo: ghcr.io/decentm
+          image_tag: latest
+          version: ${{ matrix.version }}
+          iso_name: ${{ matrix.recipe }}-latest-${{ matrix.arch }}.iso
+          variant: ${{ matrix.variant }}
+          web_ui: false
 
-          # enabled by default, disable if your image is small and you want faster builds
-          maximize_build_space: ${{ matrix.maximize_build_space }}
+      # This example is for uploading your ISO as a Github artifact. You can do something similar using any cloud storage, so long as you copy the output
+      - name: Upload ISO as artifact
+        id: upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.build.outputs.iso_name }}
+          path: |
+            ${{ steps.build.outputs.iso_path }}
+            ${{ steps.build.outputs.iso_path }}-CHECKSUM
+          if-no-files-found: error
+          retention-days: 1
+          compression-level: 9
