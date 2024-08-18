@@ -60,12 +60,6 @@ jobs:
           #   variant: fedora-release-coreos-40-38.noarch
           #   version: 40
 
-          - recipe: xps-laptop
-            arch: x86_64
-            variant: fedora-release-bluefin-40-38.noarch
-            version: 40
-            maximize_build_space: false
-
     steps:
       - name: Build ISO
         uses: jasonn3/build-container-installer@main
