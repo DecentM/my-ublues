@@ -1,0 +1,8 @@
+modules:
+  - type: script
+    scripts:
+      - install-goodx-driver.sh
+
+  - type: systemd
+    enabled:
+      - fprintd

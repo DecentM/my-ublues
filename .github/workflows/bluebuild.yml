@@ -58,6 +58,11 @@ jobs:
           #   variant: fedora-release-coreos-40-38.noarch
           #   version: 40
 
+          - recipe: xps-laptop
+            arch: x86_64
+            variant: fedora-release-bluefin-40-38.noarch
+            version: 40
+
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
