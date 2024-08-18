@@ -8,4 +8,4 @@ modules:
   - type: script
     scripts: []
     snippets:
-      - "nvidia-ctk runtime configure --runtime=crio"
+      - "nvidia-ctk runtime configure --runtime=crio --set-as-default"
