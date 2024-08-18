@@ -1,0 +1,11 @@
+modules:
+  - type: rpm-ostree
+    repos:
+      - https://nvidia.github.io/libnvidia-container/stable/rpm/nvidia-container-toolkit.repo
+    install:
+      - nvidia-container-toolkit
+
+  - type: script
+    scripts: []
+    snippets:
+      - "nvidia-ctk runtime configure --runtime=crio"

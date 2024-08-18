@@ -18,6 +18,8 @@ modules:
   - from-file: features/sshable.yml
 
   - from-file: components/kubernetes.yml
+  - from-file: features/nvidia-container-toolkit.yml
+
   - from-file: components/cockpit.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
