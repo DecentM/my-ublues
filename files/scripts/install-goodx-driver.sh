@@ -41,4 +41,5 @@ ln -s /usr/lib/libfprint-2/tod-1/libfprint-tod-goodix-53xc-0.0.4.so /usr/local/l
 chmod 755 /usr/lib/libfprint-2/tod-1/libfprint-tod-goodix-53xc-0.0.4.so
 cp libfprint-2-tod1-goodix/lib/udev/rules.d/60-libfprint-2-tod1-goodix.rules /lib/udev/rules.d/
 
-cat libfprint-2-tod1-goodix/debian/modaliases >>"/lib/modules/$(uname -r)/modules.alias"
+cp libfprint-2-tod1-goodix/debian/modaliases /tmp/modules.alias
+find /lib/modules -maxdepth 1 -mindepth 1 -type d | head -1 | xargs cp /tmp/modules.alias
