@@ -32,26 +32,31 @@ jobs:
             arch: x86_64
             variant: fedora-release-kinoite-40-38.noarch
             version: 40
+            maximize_build_space: true
 
           - recipe: workstation-nvidia
             arch: x86_64
             variant: fedora-release-kinoite-40-38.noarch
             version: 40
+            maximize_build_space: true
 
           - recipe: laptop
             arch: x86_64
             variant: fedora-release-kinoite-40-38.noarch
             version: 40
+            maximize_build_space: true
 
           - recipe: k8s-node
             arch: x86_64
             variant: fedora-release-coreos-40-38.noarch
             version: 40
+            maximize_build_space: false
 
           - recipe: k8s-node-nvidia
             arch: x86_64
             variant: fedora-release-coreos-40-38.noarch
             version: 40
+            maximize_build_space: false
 
           # - recipe: k8s-node-legacy-nvidia
           #   arch: x86_64
@@ -62,6 +67,7 @@ jobs:
             arch: x86_64
             variant: fedora-release-bluefin-40-38.noarch
             version: 40
+            maximize_build_space: false
 
     steps:
       # the build is fully handled by the reusable github action
@@ -74,7 +80,7 @@ jobs:
           pr_event_number: ${{ github.event.number }}
 
           # enabled by default, disable if your image is small and you want faster builds
-          maximize_build_space: true
+          maximize_build_space: ${{ matrix.maximize_build_space }}
 
       - name: Build ISO
         uses: jasonn3/build-container-installer@main
