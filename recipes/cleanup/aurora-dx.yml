@@ -4,7 +4,6 @@ modules:
       - fish
       - plasma-wallpapers-dynamic-builder-fish-completion
       - ptyxis
-      - devpod
       - lxc
       - lxd-agent
       - lxd
@@ -22,6 +21,4 @@ modules:
         - io.github.flattool.Warehouse
         - org.gnome.DejaDup
         - org.kde.haruna
-        - org.kde.kclock
-        - org.kde.kweather
         - org.mozilla.Thunderbird
