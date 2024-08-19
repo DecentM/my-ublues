@@ -1,0 +1,7 @@
+type: systemd
+
+system:
+  masked:
+    # Masking suspend.target will prevent the system from suspending at all,
+    # even by user request.
+    - suspend.target

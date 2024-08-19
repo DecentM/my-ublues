@@ -16,6 +16,7 @@ modules:
 
   - from-file: features/dotfiles.yml
   - from-file: features/sshable.yml
+  - from-file: features/no-suspend.yml
 
   - from-file: components/kubernetes.yml
   - from-file: components/nvidia-container-toolkit.yml
