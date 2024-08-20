@@ -1,7 +1,14 @@
-type: systemd
+modules:
+  - type: systemd
+    system:
+      masked:
+        # Masking suspend.target will prevent the system from suspending at all,
+        # even by user request.
+        - suspend.target
 
-system:
-  masked:
-    # Masking suspend.target will prevent the system from suspending at all,
-    # even by user request.
-    - suspend.target
+  - type: script
+    scripts: []
+    snippets:
+      - "echo HandleLidSwitch=ignore >> /usr/lib/systemd/logind.conf"
+      - "echo HandleLidSwitchExternalPower=ignore >> /usr/lib/systemd/logind.conf"
+      - "echo HandleSuspendKey=ignore >> /usr/lib/systemd/logind.conf"
