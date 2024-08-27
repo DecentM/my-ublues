@@ -1,6 +1,6 @@
 modules:
   - type: chezmoi
-    repository: "https://github.com/DecentM/dotfiles.git"
+    repository: DecentM
     all-users: true
     file-conflict-policy: replace # override changed files with those from the repo
     run-every: 6h
@@ -8,10 +8,4 @@ modules:
   - type: rpm-ostree
     install:
       - zsh
-      - sshpass
       - zoxide
-
-  # TODO: setup zsh as default shell
-  - type: script
-    scripts: []
-    snippets: []
