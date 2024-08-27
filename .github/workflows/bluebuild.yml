@@ -52,16 +52,16 @@ jobs:
             version: 40
             maximize_build_space: false
 
-          - recipe: k8s-node-nvidia
+          - recipe: k8s-node-hci-zfs-nvidia
             arch: x86_64
             variant: fedora-release-coreos-40-38.noarch
             version: 40
             maximize_build_space: false
 
-          # - recipe: k8s-node-legacy-nvidia
-          #   arch: x86_64
-          #   variant: fedora-release-coreos-40-38.noarch
-          #   version: 40
+          - recipe: server
+            arch: x86_64
+            variant: fedora-release-coreos-40-38.noarch
+            version: 40
 
     steps:
       # the build is fully handled by the reusable github action

@@ -8,14 +8,9 @@ modules:
       - lxd-agent
       - lxd
       - p7zip
-      - podman-compose
-      - podman-tui
-      - podmansh
-      - nano
-      - nano-default-editor
 
   - type: default-flatpaks
-    notify: true # Send notification after install/uninstall is finished (true/false)
+    notify: false # Send notification after install/uninstall is finished (true/false)
     system:
       remove:
         - io.github.flattool.Warehouse

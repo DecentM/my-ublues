@@ -12,6 +12,8 @@ image-version: latest # latest is also supported if you want new updates ASAP
 modules:
   # Cleanup
   - from-file: cleanup/aurora-dx.yml
+  - from-file: cleanup/podman.yml
+  - from-file: cleanup/nano.yml
 
   # Tools
   - from-file: tools/general.yml

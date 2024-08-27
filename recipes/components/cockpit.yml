@@ -3,26 +3,11 @@ modules:
   - type: rpm-ostree
     install:
       - cockpit
-      - cockpit-machines
       - cockpit-ostree
       - cockpit-navigator
+      - cockpit-networkmanager
       # for cockpit-sensors
       - lm_sensors
-
-  - type: rpm-ostree
-    repos:
-      - https://copr.fedorainfracloud.org/coprs/spike/znapzend/repo/fedora-40/spike-znapzend-fedora-40.repo
-    install:
-      # for cockpit-zfs-manager
-      - znapzend
-
-  # cockpit-zfs-manager
-  - type: script
-    scripts: []
-    snippets:
-      - "git clone https://github.com/45drives/cockpit-zfs-manager.git"
-      - "cp -r cockpit-zfs-manager/zfs /usr/share/cockpit"
-      - "rm -r cockpit-zfs-manager"
 
   # cockpit-sensors
   - type: script

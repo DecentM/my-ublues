@@ -1,0 +1,15 @@
+modules:
+  - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/spike/znapzend/repo/fedora-40/spike-znapzend-fedora-40.repo
+    install:
+      # for cockpit-zfs-manager
+      - znapzend
+
+  # cockpit-zfs-manager
+  - type: script
+    scripts: []
+    snippets:
+      - "git clone https://github.com/45drives/cockpit-zfs-manager.git"
+      - "cp -r cockpit-zfs-manager/zfs /usr/share/cockpit"
+      - "rm -r cockpit-zfs-manager"

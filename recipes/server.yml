@@ -1,16 +1,18 @@
 # image will be published to ghcr.io/<user>/<name>
-name: k8s-node-nvidia
+name: k8s-node
 # description will be included in the image's metadata
-description: This is my personal OS image for nodes in my k8s cluster with Nvidia blobs.
+description: This is my personal OS image for one-off servers.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/ucore-hci
-image-version: stable-nvidia-zfs # latest is also supported if you want new updates ASAP
+base-image: ghcr.io/ublue-os/ucore-minimal
+image-version: stable # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
   - from-file: cleanup/ucore.yml
+  - from-file: cleanup/nano.yml
+  - from-file: cleanup/coreos-installer.yml
 
   - from-file: tools/general.yml
 
@@ -18,8 +20,6 @@ modules:
   - from-file: features/sshable.yml
   - from-file: features/no-suspend.yml
 
-  - from-file: components/kubernetes.yml
-  - from-file: components/nvidia-container-toolkit.yml
   - from-file: components/cockpit.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

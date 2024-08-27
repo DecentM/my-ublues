@@ -31,34 +31,10 @@ jobs:
             version: 40
             maximize_build_space: true
 
-          - recipe: workstation-nvidia
-            arch: x86_64
-            variant: fedora-release-kinoite-40-38.noarch
-            version: 40
-            maximize_build_space: true
-
-          - recipe: laptop
-            arch: x86_64
-            variant: fedora-release-kinoite-40-38.noarch
-            version: 40
-            maximize_build_space: true
-
-          - recipe: k8s-node
+          - recipe: server
             arch: x86_64
             variant: fedora-release-coreos-40-38.noarch
             version: 40
-            maximize_build_space: false
-
-          - recipe: k8s-node-nvidia
-            arch: x86_64
-            variant: fedora-release-coreos-40-38.noarch
-            version: 40
-            maximize_build_space: false
-
-          # - recipe: k8s-node-legacy-nvidia
-          #   arch: x86_64
-          #   variant: fedora-release-coreos-40-38.noarch
-          #   version: 40
 
     steps:
       - name: Build ISO
