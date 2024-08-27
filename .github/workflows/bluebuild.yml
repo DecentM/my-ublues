@@ -62,6 +62,7 @@ jobs:
             arch: x86_64
             variant: fedora-release-coreos-40-38.noarch
             version: 40
+            maximize_build_space: false
 
     steps:
       # the build is fully handled by the reusable github action
