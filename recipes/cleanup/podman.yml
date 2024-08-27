@@ -5,3 +5,4 @@ modules:
       - podman-compose
       - cockpit-podman
       - toolbox
+      - bootc
