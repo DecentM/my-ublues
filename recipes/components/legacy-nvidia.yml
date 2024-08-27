@@ -1,7 +1,7 @@
 modules:
   - type: rpm-ostree
     repos:
-      - https://mirrors.rpmfusion.org/nonfree/fedora/40/Everything/x86_64/os/
-      - https://mirrors.rpmfusion.org/free/fedora/40/Everything/x86_64/os/
+      - https://mirrors.rpmfusion.org/nonfree/fedora/%OS_VERSION%/Everything/x86_64/os/
+      - https://mirrors.rpmfusion.org/free/fedora/%OS_VERSION%/Everything/x86_64/os/
     install:
       - akmod-nvidia-470xx

@@ -2,4 +2,3 @@ modules:
   - type: rpm-ostree
     remove:
       - bootc
-      - toolbox

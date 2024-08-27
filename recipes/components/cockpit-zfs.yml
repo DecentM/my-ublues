@@ -1,7 +1,7 @@
 modules:
   - type: rpm-ostree
     repos:
-      - https://copr.fedorainfracloud.org/coprs/spike/znapzend/repo/fedora-40/spike-znapzend-fedora-40.repo
+      - https://copr.fedorainfracloud.org/coprs/spike/znapzend/repo/fedora-%OS_VERSION%/spike-znapzend-fedora-%OS_VERSION%.repo
     install:
       # for cockpit-zfs-manager
       - znapzend

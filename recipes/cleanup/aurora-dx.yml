@@ -8,6 +8,7 @@ modules:
       - lxd-agent
       - lxd
       - p7zip
+      - podman-tui
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)

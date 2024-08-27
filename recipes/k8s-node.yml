@@ -10,7 +10,7 @@ image-version: stable # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - from-file: cleanup/ucore.yml
+  - from-file: cleanup/bootc.yml
   - from-file: cleanup/podman.yml
   - from-file: cleanup/nano.yml
   - from-file: cleanup/coreos-installer.yml
