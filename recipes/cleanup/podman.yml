@@ -3,6 +3,5 @@ modules:
     remove:
       - podman
       - podman-compose
-      - podmansh
       - cockpit-podman
       - toolbox
