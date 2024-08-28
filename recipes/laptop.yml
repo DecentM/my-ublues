@@ -23,6 +23,7 @@ modules:
   - from-file: flatpaks/integrated.yml
   - from-file: flatpaks/thirdparty.yml
   - from-file: flatpaks/work.yml
+  - from-file: features/sshable.yml
 
   # Files
   - from-file: features/dotfiles.yml
