@@ -14,11 +14,11 @@ modules:
   - from-file: cleanup/coreos-installer.yml
 
   - from-file: tools/general.yml
+  - from-file: tools/git-ssh.yml
 
   - from-file: features/dotfiles.yml
   - from-file: features/sshable.yml
   - from-file: features/no-suspend.yml
-  - from-file: features/git-ssh.yml
 
   - from-file: components/cockpit.yml
 

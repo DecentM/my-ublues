@@ -17,6 +17,7 @@ modules:
   # Tools
   - from-file: tools/general.yml
   - from-file: tools/tlp.yml
+  - from-file: tools/git-ssh.yml
 
   # Software
   - from-file: flatpaks/integrated.yml
