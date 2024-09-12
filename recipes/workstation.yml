@@ -17,6 +17,7 @@ modules:
   # Tools
   - from-file: tools/general.yml
   - from-file: tools/git-ssh.yml
+  - from-file: tools/gcloud-cli.yml
 
   # Software
   - from-file: flatpaks/integrated.yml
