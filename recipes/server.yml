@@ -17,6 +17,7 @@ modules:
   - from-file: tools/git-ssh.yml
   - from-file: tools/gcloud-cli.yml
 
+  - from-file: features/disable-selinux.yml
   - from-file: features/dotfiles.yml
   - from-file: features/sshable.yml
   - from-file: features/no-suspend.yml
