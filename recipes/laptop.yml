@@ -24,9 +24,10 @@ modules:
   - from-file: flatpaks/integrated.yml
   - from-file: flatpaks/thirdparty.yml
   - from-file: flatpaks/work.yml
-  - from-file: features/sshable.yml
 
-  # Files
+  # Features
+  - from-file: features/ublue-update.yml
+  - from-file: features/sshable.yml
   - from-file: features/dotfiles.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

@@ -1,0 +1,16 @@
+modules:
+  - type: bling
+    install:
+      - ublue-update
+
+  - type: systemd
+    system:
+      disabled:
+        - rpm-ostreed-automatic.timer
+      enabled:
+        - ublue-update.service
+
+  - type: files
+    files:
+      - source: ublue-update
+        destination: /

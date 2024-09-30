@@ -27,6 +27,7 @@ modules:
   - from-file: features/sshable.yml
 
   # Files
+  - from-file: features/ublue-update.yml
   - from-file: features/dotfiles.yml
   - from-file: features/libvirt-hooks.yml
 
