@@ -30,38 +30,38 @@ jobs:
         include:
           - recipe: workstation
             arch: x86_64
-            variant: fedora-release-kinoite-40-38.noarch
-            version: 40
+            variant: fedora-release-kinoite-41-38.noarch
+            version: 41
             maximize_build_space: true
 
           - recipe: workstation-nvidia
             arch: x86_64
-            variant: fedora-release-kinoite-40-38.noarch
-            version: 40
+            variant: fedora-release-kinoite-41-38.noarch
+            version: 41
             maximize_build_space: true
 
           - recipe: laptop
             arch: x86_64
-            variant: fedora-release-kinoite-40-38.noarch
-            version: 40
+            variant: fedora-release-kinoite-41-38.noarch
+            version: 41
             maximize_build_space: true
 
           - recipe: k8s-node
             arch: x86_64
-            variant: fedora-release-coreos-40-38.noarch
-            version: 40
+            variant: fedora-release-coreos-41-38.noarch
+            version: 41
             maximize_build_space: false
 
           - recipe: k8s-node-hci-zfs-nvidia
             arch: x86_64
-            variant: fedora-release-coreos-40-38.noarch
-            version: 40
+            variant: fedora-release-coreos-41-38.noarch
+            version: 41
             maximize_build_space: false
 
           - recipe: server
             arch: x86_64
-            variant: fedora-release-coreos-40-38.noarch
-            version: 40
+            variant: fedora-release-coreos-41-38.noarch
+            version: 41
             maximize_build_space: false
 
     steps:
