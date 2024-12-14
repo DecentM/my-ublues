@@ -1,5 +1,6 @@
 modules:
   - type: rpm-ostree
+
     install:
       - sshpass
       - pinentry-tty
