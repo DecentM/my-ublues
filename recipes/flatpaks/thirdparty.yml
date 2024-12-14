@@ -1,22 +1,23 @@
-type: default-flatpaks
+modules:
+  - type: default-flatpaks
 
-notify: true # Send notification after install/uninstall is finished (true/false)
+    notify: true # Send notification after install/uninstall is finished (true/false)
 
-system:
-  # If no repo information is specified, Flathub will be used by default
+    system:
+      # If no repo information is specified, Flathub will be used by default
 
-  install:
-    # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
-    - com.anydesk.Anydesk
-    - com.bitwarden.desktop
-    - com.discordapp.Discord
-    - com.stremio.Stremio
-    - dev.deedles.Trayscale
-    - ee.ria.qdigidoc4
-    - io.github.martchus.syncthingtray
-    - io.github.slgobinath.SafeEyes
-    - net.cozic.joplin_desktop
-    - one.ablaze.floorp
-    - org.onlyoffice.desktopeditors
-    - org.signal.Signal
-    - org.videolan.VLC
+      install:
+        # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
+        - com.anydesk.Anydesk
+        - com.bitwarden.desktop
+        - com.discordapp.Discord
+        - com.stremio.Stremio
+        - dev.deedles.Trayscale
+        - ee.ria.qdigidoc4
+        - io.github.martchus.syncthingtray
+        - io.github.slgobinath.SafeEyes
+        - net.cozic.joplin_desktop
+        - one.ablaze.floorp
+        - org.onlyoffice.desktopeditors
+        - org.signal.Signal
+        - org.videolan.VLC

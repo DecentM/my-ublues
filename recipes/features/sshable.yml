@@ -1,4 +1,6 @@
-type: files
-files:
-  - source: sshable
-    destination: /
+modules:
+  - type: files
+
+    files:
+      - source: sshable
+        destination: /

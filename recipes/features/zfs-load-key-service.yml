@@ -1,4 +1,6 @@
-type: files
-files:
-  - source: zfs-load-key
-    destination: /
+modules:
+  - type: files
+
+    files:
+      - source: zfs-load-key
+        destination: /

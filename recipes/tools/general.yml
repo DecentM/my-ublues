@@ -1,13 +1,11 @@
-type: rpm-ostree
+modules:
+  - type: rpm-ostree
 
-repos:
-  # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
-
-install:
-  - screen
-  - iftop
-  - mosh
-  - powertop
-  - htop
-  - vim
-  - iotop
+    install:
+      - screen
+      - iftop
+      - mosh
+      - powertop
+      - htop
+      - vim
+      - iotop

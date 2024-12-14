@@ -1,10 +1,11 @@
-type: default-flatpaks
+modules:
+  - type: default-flatpaks
 
-notify: true # Send notification after install/uninstall is finished (true/false)
+    notify: true # Send notification after install/uninstall is finished (true/false)
 
-system:
-  # If no repo information is specified, Flathub will be used by default
+    system:
+      # If no repo information is specified, Flathub will be used by default
 
-  install:
-    - com.obsproject.Studio
-    - fr.handbrake.ghb
+      install:
+        - com.obsproject.Studio
+        - fr.handbrake.ghb
