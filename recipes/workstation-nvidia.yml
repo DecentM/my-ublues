@@ -24,10 +24,11 @@ modules:
   - from-file: flatpaks/video-prod.yml
   - from-file: flatpaks/thirdparty.yml
   - from-file: flatpaks/work.yml
-  - from-file: features/sshable.yml
+  - from-file: flatpaks/office.yml
 
   # Files
   - from-file: features/ublue-update.yml
+  - from-file: features/sshable.yml
   - from-file: features/dotfiles.yml
   - from-file: features/libvirt-hooks.yml
 
