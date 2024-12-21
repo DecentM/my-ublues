@@ -9,3 +9,4 @@ modules:
       - htop
       - vim
       - iotop
+      - inxi
