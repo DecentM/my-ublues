@@ -75,7 +75,7 @@ jobs:
             variant: fedora-release-coreos-41-38.noarch
             version: 41
             maximize_build_space: true
-            rechunk: true
+            rechunk: ${{ github.event_name == 'schedule' }}
 
     steps:
       # the build is fully handled by the reusable github action

@@ -17,6 +17,7 @@ modules:
 
   - from-file: features/dotfiles.yml
   - from-file: features/sshable.yml
+  - from-file: features/trust-custom-ca.yml
 
   - from-file: flatpaks/integrated.yml
 
