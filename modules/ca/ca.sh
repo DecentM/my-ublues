@@ -26,7 +26,7 @@ if [ ! -f "$filepath" ]; then
     exit 1
 fi
 
-targetpath="/etc/pki/ca-trust/source/anchors/$CA_NAME.crt"
+targetpath="/usr/share/pki/ca-trust-source/anchors/$CA_NAME.crt"
 
 if [ -f "$targetpath" ]; then
     printf 'CA "%s" is already installed at %s\n' "$CA_NAME" "$targetpath"
