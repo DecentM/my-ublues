@@ -1,8 +1,6 @@
 modules:
   - type: rpm-ostree
     remove:
-      - podman
       - podman-compose
       - cockpit-podman
       - toolbox
-      - bootc
