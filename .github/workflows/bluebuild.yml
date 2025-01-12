@@ -33,14 +33,14 @@ jobs:
             variant: fedora-release-kinoite-41-38.noarch
             version: 41
             maximize_build_space: true
-            rechunk: false
+            rechunk: ${{ github.event_name == 'schedule' }}
 
           - recipe: workstation-nvidia
             arch: x86_64
             variant: fedora-release-kinoite-41-38.noarch
             version: 41
             maximize_build_space: true
-            rechunk: false
+            rechunk: ${{ github.event_name == 'schedule' }}
 
           - recipe: laptop
             arch: x86_64
@@ -54,21 +54,21 @@ jobs:
             variant: fedora-release-coreos-41-38.noarch
             version: 41
             maximize_build_space: false
-            rechunk: false
+            rechunk: ${{ github.event_name == 'schedule' }}
 
           - recipe: k8s-node-hci-zfs-nvidia
             arch: x86_64
             variant: fedora-release-coreos-41-38.noarch
             version: 41
             maximize_build_space: false
-            rechunk: false
+            rechunk: ${{ github.event_name == 'schedule' }}
 
           - recipe: server
             arch: x86_64
             variant: fedora-release-coreos-41-38.noarch
             version: 41
             maximize_build_space: false
-            rechunk: false
+            rechunk: ${{ github.event_name == 'schedule' }}
 
           - recipe: bazzite
             arch: x86_64
