@@ -11,3 +11,4 @@ modules:
         - org.kde.kontact
         - org.kde.krita
         - org.kde.okteta
+        - org.onlyoffice.desktopeditors

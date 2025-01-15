@@ -17,7 +17,6 @@ modules:
         - io.github.martchus.syncthingtray
         - io.github.slgobinath.SafeEyes
         - net.cozic.joplin_desktop
-        - one.ablaze.floorp
-        - org.onlyoffice.desktopeditors
+        - app.zen_browser.zen
         - org.signal.Signal
         - org.videolan.VLC
