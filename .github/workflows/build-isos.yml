@@ -36,6 +36,11 @@ jobs:
             variant: fedora-release-coreos-41-38.noarch
             version: 41
 
+          - recipe: bazzite
+            arch: x86_64
+            variant: fedora-release-coreos-41-38.noarch
+            version: 41
+
     steps:
       - name: Build ISO
         uses: jasonn3/build-container-installer@main
