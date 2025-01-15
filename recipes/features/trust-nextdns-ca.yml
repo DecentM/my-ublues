@@ -1,0 +1,4 @@
+modules:
+  - type: ca
+    source: local
+    name: nextdns
