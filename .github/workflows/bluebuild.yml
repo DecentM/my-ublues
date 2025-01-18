@@ -37,7 +37,7 @@ jobs:
             variant: fedora-release-kinoite-41-38.noarch
             version: 41
             maximize_build_space: true
-            rechunk: ${{ github.event_name == 'schedule' }}
+            rechunk: false
 
           - recipe: laptop
             arch: x86_64
