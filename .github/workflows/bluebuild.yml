@@ -60,6 +60,13 @@ jobs:
             maximize_build_space: false
             rechunk: ${{ github.event_name == 'schedule' }}
 
+          - recipe: k8s-node-hci-zfs
+            arch: x86_64
+            variant: fedora-release-coreos-41-38.noarch
+            version: 41
+            maximize_build_space: false
+            rechunk: ${{ github.event_name == 'schedule' }}
+
           - recipe: server
             arch: x86_64
             variant: fedora-release-coreos-41-38.noarch
