@@ -30,7 +30,7 @@ jobs:
             variant: fedora-release-kinoite-41-38.noarch
             version: 41
             maximize_build_space: true
-            rechunk: ${{ github.event_name == 'schedule' }}
+            rechunk: true
 
           - recipe: workstation-nvidia
             arch: x86_64
@@ -44,42 +44,42 @@ jobs:
             variant: fedora-release-kinoite-41-38.noarch
             version: 41
             maximize_build_space: true
-            rechunk: ${{ github.event_name == 'schedule' }}
+            rechunk: true
 
           - recipe: k8s-node
             arch: x86_64
             variant: fedora-release-coreos-41-38.noarch
             version: 41
             maximize_build_space: false
-            rechunk: ${{ github.event_name == 'schedule' }}
+            rechunk: true
 
           - recipe: k8s-node-hci-zfs-nvidia
             arch: x86_64
             variant: fedora-release-coreos-41-38.noarch
             version: 41
             maximize_build_space: false
-            rechunk: ${{ github.event_name == 'schedule' }}
+            rechunk: true
 
           - recipe: k8s-node-hci-zfs
             arch: x86_64
             variant: fedora-release-coreos-41-38.noarch
             version: 41
             maximize_build_space: false
-            rechunk: ${{ github.event_name == 'schedule' }}
+            rechunk: true
 
           - recipe: server
             arch: x86_64
             variant: fedora-release-coreos-41-38.noarch
             version: 41
             maximize_build_space: false
-            rechunk: ${{ github.event_name == 'schedule' }}
+            rechunk: true
 
           - recipe: bazzite
             arch: x86_64
             variant: fedora-release-coreos-41-38.noarch
             version: 41
             maximize_build_space: true
-            rechunk: ${{ github.event_name == 'schedule' }}
+            rechunk: true
 
           - recipe: bazzite-nvidia
             arch: x86_64
