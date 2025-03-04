@@ -27,7 +27,6 @@ modules:
   - from-file: flatpaks/office.yml
 
   # Features
-  - from-file: features/ublue-update.yml
   - from-file: features/sshable.yml
   - from-file: features/dotfiles.yml
   - from-file: features/trust-custom-ca.yml
