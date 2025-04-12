@@ -10,5 +10,4 @@ modules:
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
         - com.slack.Slack
         - io.dbeaver.DBeaverCommunity
-        - io.httpie.Httpie
         - us.zoom.Zoom

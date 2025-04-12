@@ -12,9 +12,8 @@ modules:
         - com.bitwarden.desktop
         - com.discordapp.Discord
         - com.stremio.Stremio
-        - dev.deedles.Trayscale
+        - org.fkoehler.KTailctl
         - ee.ria.qdigidoc4
-        - io.github.martchus.syncthingtray
         - io.github.slgobinath.SafeEyes
         - net.cozic.joplin_desktop
         - app.zen_browser.zen

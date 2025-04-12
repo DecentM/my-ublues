@@ -9,3 +9,4 @@ modules:
       install:
         - com.obsproject.Studio
         - fr.handbrake.ghb
+        - org.kde.kdenlive

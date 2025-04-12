@@ -7,8 +7,6 @@ modules:
       # If no repo information is specified, Flathub will be used by default
 
       install:
-        - org.kde.kcachegrind
         - org.kde.kontact
         - org.kde.krita
-        - org.kde.okteta
-        - org.onlyoffice.desktopeditors
+        - org.libreoffice.LibreOffice
