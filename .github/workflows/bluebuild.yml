@@ -46,6 +46,13 @@ jobs:
             maximize_build_space: true
             rechunk: true
 
+          - recipe: laptop-kinoite
+            arch: x86_64
+            variant: fedora-release-kinoite-41-38.noarch
+            version: 41
+            maximize_build_space: true
+            rechunk: true
+
           - recipe: k8s-node
             arch: x86_64
             variant: fedora-release-coreos-41-38.noarch
