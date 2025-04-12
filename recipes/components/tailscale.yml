@@ -1,0 +1,9 @@
+modules:
+  - type: rpm-ostree
+    install:
+      - tailscale
+
+  - type: systemd
+    system:
+      enabled:
+        - tailscaled.service

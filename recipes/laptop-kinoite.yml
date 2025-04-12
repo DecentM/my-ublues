@@ -13,6 +13,10 @@ modules:
   # Cleanup
   - from-file: cleanup/nano.yml
 
+  # Components
+  - from-file: components/nerd-fonts.yml
+  - from-file: components/tailscale.yml
+
   # Tools
   - from-file: tools/general.yml
   - from-file: tools/tlp.yml
