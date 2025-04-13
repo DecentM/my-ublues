@@ -95,13 +95,6 @@ jobs:
             maximize_build_space: true
             rechunk: true
 
-          - recipe: bazzite-nvidia
-            arch: x86_64
-            variant: fedora-release-coreos-41-38.noarch
-            version: 41
-            maximize_build_space: true
-            rechunk: false
-
           - recipe: bazzite-deck
             arch: x86_64
             variant: fedora-release-coreos-41-38.noarch
