@@ -13,10 +13,6 @@ modules:
   # Cleanup
   - from-file: cleanup/nano.yml
 
-  # Components
-  - from-file: components/nerd-fonts.yml
-  - from-file: components/tailscale.yml
-
   # Tools
   - from-file: tools/general.yml
   - from-file: tools/tlp.yml
@@ -33,5 +29,10 @@ modules:
   - from-file: features/dotfiles.yml
   - from-file: features/trust-custom-ca.yml
   - from-file: features/trust-nextdns-ca.yml
+
+  # Components
+  - from-file: components/nerd-fonts.yml
+  - from-file: components/tailscale.yml
+  - from-file: components/adb.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

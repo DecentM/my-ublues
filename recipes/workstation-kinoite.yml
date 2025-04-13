@@ -13,26 +13,29 @@ modules:
   # Cleanup
   - from-file: cleanup/nano.yml
 
-  # Components
-  - from-file: components/nerd-fonts.yml
-  - from-file: components/tailscale.yml
-
   # Tools
   - from-file: tools/general.yml
   - from-file: tools/git-ssh.yml
 
-  # Software
+  # Flatpaks
   - from-file: flatpaks/integrated.yml
   - from-file: flatpaks/video-prod.yml
   - from-file: flatpaks/thirdparty.yml
   - from-file: flatpaks/work.yml
   - from-file: flatpaks/office.yml
 
-  # Files
+  # Features
   - from-file: features/sshable.yml
   - from-file: features/dotfiles.yml
   - from-file: features/libvirt-hooks.yml
   - from-file: features/trust-custom-ca.yml
   - from-file: features/trust-nextdns-ca.yml
+  - from-file: features/virtualisation.yml
+
+  # Components
+  - from-file: components/nerd-fonts.yml
+  - from-file: components/tailscale.yml
+  - from-file: components/adb.yml
+  - from-file: components/virt-manager.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

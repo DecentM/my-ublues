@@ -1,0 +1,6 @@
+modules:
+  - type: rpm-ostree
+    install:
+      - virt-manager
+      - virt-v2v
+      - virt-viewer
