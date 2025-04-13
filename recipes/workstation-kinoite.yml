@@ -23,6 +23,7 @@ modules:
   - from-file: flatpaks/thirdparty.yml
   - from-file: flatpaks/work.yml
   - from-file: flatpaks/office.yml
+  - from-file: flatpaks/virtualisation.yml
 
   # Features
   - from-file: features/sshable.yml
@@ -36,6 +37,5 @@ modules:
   - from-file: components/nerd-fonts.yml
   - from-file: components/tailscale.yml
   - from-file: components/adb.yml
-  - from-file: components/virt-manager.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
