@@ -23,6 +23,7 @@ modules:
   - from-file: features/no-suspend.yml
   - from-file: features/raised-ulimits.yml
   - from-file: features/trust-custom-ca.yml
+  - from-file: features/auto-blank-terminal.yml
 
   - from-file: components/cockpit.yml
 
