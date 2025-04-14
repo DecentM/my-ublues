@@ -36,6 +36,6 @@ modules:
   # Components
   - from-file: components/nerd-fonts.yml
   - from-file: components/tailscale.yml
-  - from-file: components/podman-compose.yml
+  - from-file: components/container-compose.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

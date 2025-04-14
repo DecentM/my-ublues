@@ -1,4 +1,4 @@
 modules:
   - type: rpm-ostree
     install:
-      - podman-compose
+      - docker-compose
