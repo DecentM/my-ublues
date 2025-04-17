@@ -27,19 +27,14 @@ jobs:
         include:
           - recipe: workstation
             arch: x86_64
-            variant: fedora-release-kinoite-41-38.noarch
-            version: 41
+            variant: fedora-release-kinoite-42-26.noarch
+            version: 42
             maximize_build_space: true
 
           - recipe: server
             arch: x86_64
-            variant: fedora-release-coreos-41-38.noarch
-            version: 41
-
-          - recipe: bazzite
-            arch: x86_64
-            variant: fedora-release-coreos-41-38.noarch
-            version: 41
+            variant: fedora-release-coreos-42-26.noarch
+            version: 42
 
     steps:
       - name: Build ISO

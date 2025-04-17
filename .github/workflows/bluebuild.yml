@@ -27,71 +27,71 @@ jobs:
         include:
           - recipe: workstation
             arch: x86_64
-            variant: fedora-release-kinoite-41-38.noarch
-            version: 41
+            variant: fedora-release-kinoite-42-26.noarch
+            version: 42
             maximize_build_space: true
             rechunk: true
 
           - recipe: workstation-nvidia
             arch: x86_64
-            variant: fedora-release-kinoite-41-38.noarch
-            version: 41
+            variant: fedora-release-kinoite-42-26.noarch
+            version: 42
             maximize_build_space: true
             rechunk: false
 
           - recipe: laptop
             arch: x86_64
-            variant: fedora-release-kinoite-41-38.noarch
-            version: 41
+            variant: fedora-release-kinoite-42-26.noarch
+            version: 42
             maximize_build_space: true
             rechunk: true
 
           - recipe: laptop-kinoite
             arch: x86_64
-            variant: fedora-release-kinoite-41-38.noarch
-            version: 41
+            variant: fedora-release-kinoite-42-26.noarch
+            version: 42
             maximize_build_space: true
             rechunk: true
 
           - recipe: k8s-node
             arch: x86_64
-            variant: fedora-release-coreos-41-38.noarch
-            version: 41
+            variant: fedora-release-coreos-42-26.noarch
+            version: 42
             maximize_build_space: false
             rechunk: true
 
           - recipe: k8s-node-hci-zfs-nvidia
             arch: x86_64
-            variant: fedora-release-coreos-41-38.noarch
-            version: 41
+            variant: fedora-release-coreos-42-26.noarch
+            version: 42
             maximize_build_space: false
             rechunk: true
 
           - recipe: k8s-node-hci-zfs
             arch: x86_64
-            variant: fedora-release-coreos-41-38.noarch
-            version: 41
+            variant: fedora-release-coreos-42-26.noarch
+            version: 42
             maximize_build_space: false
             rechunk: true
 
           - recipe: server
             arch: x86_64
-            variant: fedora-release-coreos-41-38.noarch
-            version: 41
+            variant: fedora-release-coreos-42-26.noarch
+            version: 42
             maximize_build_space: false
             rechunk: true
 
           - recipe: bazzite
             arch: x86_64
-            variant: fedora-release-coreos-41-38.noarch
-            version: 41
+            variant: fedora-release-kinoite-42-26.noarch
+            version: 42
             maximize_build_space: true
             rechunk: true
 
           - recipe: bazzite-deck
             arch: x86_64
-            variant: fedora-release-coreos-41-38.noarch
-            version: 41
+            variant: fedora-release-kinoite-42-26.noarch
+            version: 42
             maximize_build_space: true
             rechunk: true
 
