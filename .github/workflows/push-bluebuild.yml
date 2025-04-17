@@ -1,0 +1,77 @@
+name: push-bluebuild
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  changes:
+    runs-on: ubuntu-latest
+
+    permissions:
+      pull-requests: read
+
+    outputs:
+      recipes: ${{ steps.filter.outputs.changes }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # This may save additional git fetch roundtrip if
+          # merge-base is found within latest 20 commits
+          fetch-depth: 20
+
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            workstation:
+              - recipes/workstation.yml
+            workstation-nvidia:
+              - recipes/workstation-nvidia.yml
+            server:
+              - recipes/server.yml
+            laptop:
+              - recipes/laptop.yml
+            laptop-kinoite:
+              - recipes/laptop-kinoite.yml
+            k8s-node:
+              - recipes/k8s-node.yml
+            k8s-node-hci-zfs:
+              - recipes/k8s-node-hci-zfs.yml
+            k8s-node-hci-zfs-nvidia:
+              - recipes/k8s-node-hci-zfs-nvidia.yml
+            bazzite:
+              - recipes/bazzite.yml
+            bazzite-deck:
+              - recipes/bazzite-deck.yml
+
+  bluebuild:
+    name: Build Custom Image
+
+    runs-on: ubuntu-latest
+
+    needs:
+      - changes
+
+    if: ${{ needs.changes.outputs.recipes != '[]' && needs.changes.outputs.recipes != '' }}
+
+    strategy:
+      matrix:
+        recipe: ${{ fromJSON(needs.changes.outputs.recipes) }}
+
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+
+    steps:
+      - name: Build Custom Image
+        uses: blue-build/github-action@v1.8.1
+        with:
+          recipe: ${{ matrix.recipe }}.yml
+          cosign_private_key: ${{ secrets.SIGNING_SECRET }}
+          registry_token: ${{ github.token }}
+          maximize_build_space: true
+          rechunk: false
