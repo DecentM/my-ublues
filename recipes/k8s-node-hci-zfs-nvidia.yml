@@ -25,8 +25,5 @@ modules:
 
   - from-file: components/kubernetes.yml
   - from-file: components/nvidia-container-toolkit.yml
-  - from-file: components/cockpit.yml
-  - from-file: components/cockpit-zfs.yml
-  - from-file: components/cockpit-hci.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

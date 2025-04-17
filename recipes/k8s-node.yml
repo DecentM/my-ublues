@@ -24,6 +24,5 @@ modules:
   - from-file: features/auto-blank-terminal.yml
 
   - from-file: components/kubernetes.yml
-  - from-file: components/cockpit.yml
 
   - type: signing
