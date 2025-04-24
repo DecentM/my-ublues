@@ -1,4 +1,4 @@
-name: daily-bluebuild
+name: weekly-bluebuild
 
 on:
   schedule:
