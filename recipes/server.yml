@@ -15,7 +15,6 @@ modules:
 
   - from-file: tools/general.yml
   - from-file: tools/git-ssh.yml
-  - from-file: tools/gcloud-cli.yml
 
   - from-file: features/disable-selinux.yml
   - from-file: features/dotfiles.yml
