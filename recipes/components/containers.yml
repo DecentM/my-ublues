@@ -1,0 +1,13 @@
+modules:
+  - type: rpm-ostree
+    install:
+      - docker-compose
+      - podman-bootc
+      - podman-compose
+      - podman-machine
+      - podman-tui
+      - podmansh
+      - docker-buildx-plugin
+      - docker-ce
+      - docker-ce-cli
+      - docker-compose-plugin
