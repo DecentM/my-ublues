@@ -28,24 +28,74 @@ jobs:
           filters: |
             workstation:
               - recipes/workstation.yml
+              - recipes/cleanup/*
+              - recipes/components/*
+              - recipes/features/*
+              - recipes/flatpaks/*
+              - recipes/tools/*
             workstation-nvidia:
               - recipes/workstation-nvidia.yml
+              - recipes/cleanup/*
+              - recipes/components/*
+              - recipes/features/*
+              - recipes/flatpaks/*
+              - recipes/tools/*
             server:
               - recipes/server.yml
+              - recipes/cleanup/*
+              - recipes/components/*
+              - recipes/features/*
+              - recipes/flatpaks/*
+              - recipes/tools/*
             laptop:
               - recipes/laptop.yml
+              - recipes/cleanup/*
+              - recipes/components/*
+              - recipes/features/*
+              - recipes/flatpaks/*
+              - recipes/tools/*
             laptop-kinoite:
               - recipes/laptop-kinoite.yml
+              - recipes/cleanup/*
+              - recipes/components/*
+              - recipes/features/*
+              - recipes/flatpaks/*
+              - recipes/tools/*
             k8s-node:
               - recipes/k8s-node.yml
+              - recipes/cleanup/*
+              - recipes/components/*
+              - recipes/features/*
+              - recipes/flatpaks/*
+              - recipes/tools/*
             k8s-node-hci-zfs:
               - recipes/k8s-node-hci-zfs.yml
+              - recipes/cleanup/*
+              - recipes/components/*
+              - recipes/features/*
+              - recipes/flatpaks/*
+              - recipes/tools/*
             k8s-node-hci-zfs-nvidia:
               - recipes/k8s-node-hci-zfs-nvidia.yml
+              - recipes/cleanup/*
+              - recipes/components/*
+              - recipes/features/*
+              - recipes/flatpaks/*
+              - recipes/tools/*
             bazzite:
               - recipes/bazzite.yml
+              - recipes/cleanup/*
+              - recipes/components/*
+              - recipes/features/*
+              - recipes/flatpaks/*
+              - recipes/tools/*
             bazzite-deck:
               - recipes/bazzite-deck.yml
+              - recipes/cleanup/*
+              - recipes/components/*
+              - recipes/features/*
+              - recipes/flatpaks/*
+              - recipes/tools/*
 
   bluebuild:
     name: Build Custom Image
