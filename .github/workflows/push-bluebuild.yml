@@ -33,6 +33,7 @@ jobs:
               - recipes/features/*
               - recipes/flatpaks/*
               - recipes/tools/*
+              - files/*
             workstation-nvidia:
               - recipes/workstation-nvidia.yml
               - recipes/cleanup/*
@@ -40,6 +41,7 @@ jobs:
               - recipes/features/*
               - recipes/flatpaks/*
               - recipes/tools/*
+              - files/*
             server:
               - recipes/server.yml
               - recipes/cleanup/*
@@ -47,6 +49,7 @@ jobs:
               - recipes/features/*
               - recipes/flatpaks/*
               - recipes/tools/*
+              - files/*
             laptop:
               - recipes/laptop.yml
               - recipes/cleanup/*
@@ -54,6 +57,7 @@ jobs:
               - recipes/features/*
               - recipes/flatpaks/*
               - recipes/tools/*
+              - files/*
             laptop-kinoite:
               - recipes/laptop-kinoite.yml
               - recipes/cleanup/*
@@ -61,6 +65,7 @@ jobs:
               - recipes/features/*
               - recipes/flatpaks/*
               - recipes/tools/*
+              - files/*
             k8s-node:
               - recipes/k8s-node.yml
               - recipes/cleanup/*
@@ -68,6 +73,7 @@ jobs:
               - recipes/features/*
               - recipes/flatpaks/*
               - recipes/tools/*
+              - files/*
             k8s-node-hci-zfs:
               - recipes/k8s-node-hci-zfs.yml
               - recipes/cleanup/*
@@ -75,6 +81,7 @@ jobs:
               - recipes/features/*
               - recipes/flatpaks/*
               - recipes/tools/*
+              - files/*
             k8s-node-hci-zfs-nvidia:
               - recipes/k8s-node-hci-zfs-nvidia.yml
               - recipes/cleanup/*
@@ -82,6 +89,7 @@ jobs:
               - recipes/features/*
               - recipes/flatpaks/*
               - recipes/tools/*
+              - files/*
             bazzite:
               - recipes/bazzite.yml
               - recipes/cleanup/*
@@ -89,6 +97,7 @@ jobs:
               - recipes/features/*
               - recipes/flatpaks/*
               - recipes/tools/*
+              - files/*
             bazzite-deck:
               - recipes/bazzite-deck.yml
               - recipes/cleanup/*
@@ -96,6 +105,7 @@ jobs:
               - recipes/features/*
               - recipes/flatpaks/*
               - recipes/tools/*
+              - files/*
             home-theatre:
               - recipes/home-theatre.yml
               - recipes/cleanup/*
@@ -103,6 +113,7 @@ jobs:
               - recipes/features/*
               - recipes/flatpaks/*
               - recipes/tools/*
+              - files/*
 
   bluebuild:
     name: Build Custom Image
