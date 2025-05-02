@@ -16,7 +16,7 @@ modules:
   - from-file: tools/general.yml
   - from-file: tools/git-ssh.yml
 
-
+  - from-file: features/disable-selinux.yml
   - from-file: features/dotfiles.yml
   - from-file: features/sshable.yml
   - from-file: features/no-suspend.yml
