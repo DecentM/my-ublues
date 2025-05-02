@@ -18,4 +18,4 @@ StandardInput=tty
 StandardOutput=journal
 
 [Install]
-Alias=display-manager.service
+WantedBy=multi-user.target
