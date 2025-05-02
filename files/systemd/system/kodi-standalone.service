@@ -10,11 +10,14 @@ Group=kodi
 EnvironmentFile=/usr/share/kodi-standalone/env
 PAMName=login
 TTYPath=/dev/tty1
+TTYReset=yes
+TTYVHangup=yes
+TTYVTDisallocate=yes
 ExecStart=/usr/sbin/kodi-standalone
 ExecStop=/usr/bin/killall --exact --wait kodi.bin
 Restart=on-abort
 StandardInput=tty
-StandardOutput=journal
+StandardOutput=tty
 
 [Install]
 WantedBy=multi-user.target
