@@ -4,3 +4,8 @@ modules:
       enabled:
         - kodi-standalone.service
         - kodi-standalone-restart-on-resume.service
+
+  - type: files
+    files:
+      - source: kodi-as-greeter
+        destination: /
