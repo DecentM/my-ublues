@@ -55,6 +55,9 @@ jobs:
           - recipe: bazzite-deck
             maximize_build_space: true
 
+          - recipe: home-theatre
+            maximize_build_space: true
+
     steps:
       - name: Build Custom Image
         uses: blue-build/github-action@v1.8.1
@@ -120,5 +123,5 @@ jobs:
             ${{ steps.build.outputs.iso_path }}
             ${{ steps.build.outputs.iso_path }}-CHECKSUM
           if-no-files-found: error
-          retention-days: 1
+          retention-days: 7
           compression-level: 9

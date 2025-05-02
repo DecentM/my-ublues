@@ -1,0 +1,28 @@
+# image will be published to ghcr.io/<user>/<name>
+name: home-theatre
+# description will be included in the image's metadata
+description: This is my personal OS image for home theatres.
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/ucore-minimal
+image-version: stable # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - from-file: cleanup/nano.yml
+  - from-file: cleanup/coreos-installer.yml
+
+  - from-file: tools/general.yml
+  - from-file: tools/git-ssh.yml
+
+  - from-file: components/kodi.yml
+
+  - from-file: features/dotfiles.yml
+  - from-file: features/sshable.yml
+  - from-file: features/no-suspend.yml
+  - from-file: features/raised-ulimits.yml
+  - from-file: features/trust-custom-ca.yml
+  - from-file: features/kodi-as-greeter.yml
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully

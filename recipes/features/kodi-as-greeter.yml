@@ -1,0 +1,6 @@
+modules:
+  - type: systemd
+    system:
+      enabled:
+        - kodi-gbm.service
+        - kodi-gbm-restart-on-resume.service

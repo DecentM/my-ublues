@@ -96,6 +96,13 @@ jobs:
               - recipes/features/*
               - recipes/flatpaks/*
               - recipes/tools/*
+            home-theatre:
+              - recipes/home-theatre.yml
+              - recipes/cleanup/*
+              - recipes/components/*
+              - recipes/features/*
+              - recipes/flatpaks/*
+              - recipes/tools/*
 
   bluebuild:
     name: Build Custom Image
