@@ -34,16 +34,10 @@ jobs:
           - recipe: laptop
             maximize_build_space: true
 
-          - recipe: laptop-kinoite
-            maximize_build_space: true
-
           - recipe: k8s-node
             maximize_build_space: false
 
           - recipe: k8s-node-hci-zfs-nvidia
-            maximize_build_space: false
-
-          - recipe: k8s-node-hci-zfs
             maximize_build_space: false
 
           - recipe: server
