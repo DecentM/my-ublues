@@ -9,3 +9,25 @@ modules:
       - kodi-firewalld
       - kodi-platform
       - kodi-visualization-spectrum
+
+  - type: firewall
+    source: local
+
+    custom_services:
+      - name: kodi
+        description: Kodi Remote Control
+        ports:
+          # Kodi Web Interface
+          - port: 8080
+            protocol: tcp
+          # Kodi Remote Control
+          - port: 9090
+            protocol: tcp
+          # Kodi Remote Control (UDP)
+          - port: 9090
+            protocol: udp
+
+    services:
+      - name: kodi
+        zone: default
+        enabled: true
