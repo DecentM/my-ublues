@@ -34,6 +34,7 @@ jobs:
               - recipes/flatpaks/*
               - recipes/tools/*
               - files/**/*
+              - modules/**/*
             workstation-nvidia:
               - recipes/workstation-nvidia.yml
               - recipes/cleanup/*
@@ -42,6 +43,7 @@ jobs:
               - recipes/flatpaks/*
               - recipes/tools/*
               - files/**/*
+              - modules/**/*
             server:
               - recipes/server.yml
               - recipes/cleanup/*
@@ -50,6 +52,7 @@ jobs:
               - recipes/flatpaks/*
               - recipes/tools/*
               - files/**/*
+              - modules/**/*
             laptop:
               - recipes/laptop.yml
               - recipes/cleanup/*
@@ -58,6 +61,7 @@ jobs:
               - recipes/flatpaks/*
               - recipes/tools/*
               - files/**/*
+              - modules/**/*
             k8s-node:
               - recipes/k8s-node.yml
               - recipes/cleanup/*
@@ -66,6 +70,7 @@ jobs:
               - recipes/flatpaks/*
               - recipes/tools/*
               - files/**/*
+              - modules/**/*
             k8s-node-hci-zfs-nvidia:
               - recipes/k8s-node-hci-zfs-nvidia.yml
               - recipes/cleanup/*
@@ -74,6 +79,7 @@ jobs:
               - recipes/flatpaks/*
               - recipes/tools/*
               - files/**/*
+              - modules/**/*
             bazzite:
               - recipes/bazzite.yml
               - recipes/cleanup/*
@@ -82,6 +88,7 @@ jobs:
               - recipes/flatpaks/*
               - recipes/tools/*
               - files/**/*
+              - modules/**/*
             bazzite-deck:
               - recipes/bazzite-deck.yml
               - recipes/cleanup/*
@@ -90,6 +97,7 @@ jobs:
               - recipes/flatpaks/*
               - recipes/tools/*
               - files/**/*
+              - modules/**/*
             home-theatre:
               - recipes/home-theatre.yml
               - recipes/cleanup/*
@@ -98,6 +106,7 @@ jobs:
               - recipes/flatpaks/*
               - recipes/tools/*
               - files/**/*
+              - modules/**/*
 
   bluebuild:
     name: Build Custom Image
