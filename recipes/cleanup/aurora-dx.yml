@@ -14,6 +14,8 @@ modules:
       - cockpit-storaged
       - cockpit-system
       - android-tools
+      - nano
+      - nano-default-editor
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)

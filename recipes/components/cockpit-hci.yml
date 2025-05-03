@@ -1,5 +1,0 @@
-modules:
-  # https://gist.github.com/codello/118ad0562bfd91e90d5914a9e2dbe606
-  - type: rpm-ostree
-    install:
-      - cockpit-machines

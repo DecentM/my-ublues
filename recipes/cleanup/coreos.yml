@@ -1,6 +1,10 @@
 modules:
   - type: rpm-ostree
     remove:
+      - coreos-installer
+      - coreos-installer-bootinfra
+      - nano
+      - nano-default-editor
       - podman-compose
       - cockpit-podman
       - toolbox
