@@ -45,7 +45,7 @@ echo "$1" | jq -c '.custom_services[]' | while read -r svc; do
 done
 
 # Enable/disable services
-echo "$1" jq -r '
+echo "$1" | jq -r '
 .services[] |
 (if .enabled then
     "firewall-cmd --permanent --zone=\(.zone) --add-service=\(.name)"
