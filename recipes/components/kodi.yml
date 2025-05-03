@@ -29,5 +29,5 @@ modules:
 
     services:
       - name: kodi
-        zone: default
+        zone: FedoraServer
         enabled: true
