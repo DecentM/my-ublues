@@ -35,7 +35,7 @@ EOF
 }
 
 # Add ports
-echo "$1" | jq -c '.ports[]' | while read -r port; do
+echo "$1" | jq -c '.ports // [] | .[]' | while read -r port; do
     ZONE=$(echo "$port" | jq -r '.zone')
     PORT=$(echo "$port" | jq -r '.port')
     PROTO=$(echo "$port" | jq -r '.protocol')
@@ -50,7 +50,7 @@ echo "$1" | jq -c '.ports[]' | while read -r port; do
 done
 
 # Create custom services
-echo "$1" | jq -c '.custom_services[]' | while read -r service; do
+echo "$1" | jq -c '.custom_services // [] | .[]' | while read -r service; do
     NAME=$(echo "$service" | jq -r '.name')
     DESC=$(echo "$service" | jq -r '.description')
     SERVICE_FILE="$SERVICES_DIR/$NAME.xml"
@@ -67,7 +67,7 @@ echo "$1" | jq -c '.custom_services[]' | while read -r service; do
 done
 
 # Enable/disable services
-echo "$1" | jq -c '.services[]' | while read -r svc; do
+echo "$1" | jq -c '.services // [] | .[]' | while read -r svc; do
     ZONE=$(echo "$svc" | jq -r '.zone')
     NAME=$(echo "$svc" | jq -r '.name')
     ENABLED=$(echo "$svc" | jq -r '.enabled')
