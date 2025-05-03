@@ -7,7 +7,7 @@ Conflicts=getty@tty1.service
 [Service]
 EnvironmentFile=/usr/share/kodi-standalone/env
 TTYPath=/dev/tty1
-ExecStart=/usr/sbin/kodi-standalone
+ExecStart=/usr/bin/kodi-standalone
 ExecStop=/usr/bin/killall --exact --wait kodi.bin
 Restart=on-abort
 StandardInput=tty
