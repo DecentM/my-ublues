@@ -13,21 +13,13 @@ modules:
   - type: firewall
     source: local
 
-    custom_services:
-      - name: kodi
-        description: Kodi Remote Control
-        ports:
-          # Kodi Web Interface
-          - port: 8080
-            protocol: tcp
-          # Kodi Remote Control
-          - port: 9090
-            protocol: tcp
-          # Kodi Remote Control (UDP)
-          - port: 9090
-            protocol: udp
-
     services:
-      - name: kodi
+      - name: kodi-eventserver
+        zone: FedoraServer
+        enabled: true
+      - name: kodi-http
+        zone: FedoraServer
+        enabled: true
+      - name: kodi-jsonrpc
         zone: FedoraServer
         enabled: true
