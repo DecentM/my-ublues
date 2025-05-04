@@ -8,3 +8,4 @@ modules:
       - podman-compose
       - cockpit-podman
       - toolbox
+      - zincati
