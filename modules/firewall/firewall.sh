@@ -83,7 +83,6 @@ done
 echo "$1" | jq -c '.custom_zones // [] | .[]' | while read -r zone; do
     NAME=$(echo "$zone" | jq -r '.name')
     DESC=$(echo "$zone" | jq -r '.description')
-    TARGET=$(echo "$zone" | jq -r '.target')
     ZONE_FILE="$ZONES_DIR/$NAME.xml"
     ensure_zone_file "$NAME"
 
@@ -93,7 +92,6 @@ echo "$1" | jq -c '.custom_zones // [] | .[]' | while read -r zone; do
         echo "<zone>"
         echo "  <short>$NAME</short>"
         echo "  <description>$DESC</description>"
-        echo "  <target>$TARGET</target>"
         echo "$zone" | jq -r '.services // [] | .[] | "  <service name=\"\(.name)\"/>"'
         echo "$zone" | jq -r '.ports // [] | .[] | "  <port protocol=\"\(.protocol)\" port=\"\(.port)\"/>"'
         echo "$zone" | jq -r '.interfaces // [] | .[] | "  <interface name=\"\(.name)\"/>"'

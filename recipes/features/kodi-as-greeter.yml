@@ -20,8 +20,11 @@ modules:
     custom_zones:
       - name: Kodi
         description: Kodi media center
-        target: public
         services:
+          - name: ssh
+          - name: mdns
+          - name: samba-client
+          - name: dhcpv6-client
           - name: kodi-eventserver
           - name: kodi-http
           - name: kodi-jsonrpc
