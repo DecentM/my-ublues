@@ -119,6 +119,8 @@ jobs:
     if: ${{ needs.changes.outputs.recipes != '[]' && needs.changes.outputs.recipes != '' }}
 
     strategy:
+      fail-fast: false
+
       matrix:
         recipe: ${{ fromJSON(needs.changes.outputs.recipes) }}
 
