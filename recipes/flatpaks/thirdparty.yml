@@ -13,9 +13,15 @@ modules:
         - com.discordapp.Discord
         - com.stremio.Stremio
         - org.fkoehler.KTailctl
-        - ee.ria.qdigidoc4
         - io.github.slgobinath.SafeEyes
         - net.cozic.joplin_desktop
         - app.zen_browser.zen
         - org.signal.Signal
-        - org.videolan.VLC
+        - io.github.dvlv.boxbuddyrs
+        - io.missioncenter.MissionCenter
+        - org.gnome.Firmware
+        - org.fedoraproject.MediaWriter
+        - com.slack.Slack
+        - io.dbeaver.DBeaverCommunity
+        - us.zoom.Zoom
+        - org.libreoffice.LibreOffice

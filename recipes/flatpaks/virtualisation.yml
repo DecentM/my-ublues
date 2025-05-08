@@ -1,8 +1,0 @@
-modules:
-  - type: default-flatpaks
-    notify: true
-
-    system:
-      install:
-        - org.virt_manager.virt-viewer
-        - org.virt_manager.virt-manager

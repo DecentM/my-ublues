@@ -18,11 +18,8 @@ modules:
   - from-file: tools/git-ssh.yml
 
   # Software
-  - from-file: flatpaks/integrated.yml
-  - from-file: flatpaks/video-prod.yml
+  - from-file: flatpaks/firstparty.yml
   - from-file: flatpaks/thirdparty.yml
-  - from-file: flatpaks/work.yml
-  - from-file: flatpaks/office.yml
 
   # Files
   - from-file: features/sshable.yml

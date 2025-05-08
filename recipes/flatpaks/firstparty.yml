@@ -8,13 +8,20 @@ modules:
 
       install:
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
-        - io.github.dvlv.boxbuddyrs
-        - io.missioncenter.MissionCenter
-        - org.gnome.Firmware
         - org.kde.filelight
         - org.kde.gwenview
         - org.kde.kcalc
         - org.kde.kleopatra
         - org.kde.okular
         - org.kde.yakuake
-        - org.fedoraproject.MediaWriter
+        - org.kde.haruna
+        - org.kde.kolourpaint
+        - org.kde.kruler
+        - org.kde.kweather
+        - org.kde.koko
+        - org.kde.krdc
+        - org.kde.kclock
+        - org.kde.kfind
+        - org.kde.elisa
+        - org.kde.marble
+        - org.kde.kontact
