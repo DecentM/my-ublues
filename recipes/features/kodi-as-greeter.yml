@@ -22,8 +22,8 @@ modules:
         description: Kodi media center
         target: public
         services:
-          - kodi-eventserver
-          - kodi-http
-          - kodi-jsonrpc
+          - name: kodi-eventserver
+          - name: kodi-http
+          - name: kodi-jsonrpc
 
     default_zone: Kodi
