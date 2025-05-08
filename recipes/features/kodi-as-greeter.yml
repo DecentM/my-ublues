@@ -9,3 +9,21 @@ modules:
     files:
       - source: kodi-as-greeter
         destination: /
+
+  - type: firewall
+    source: local
+
+    remove_zones:
+      - name: FedoraServer
+      - name: FedoraWorkstation
+
+    custom_zones:
+      - name: Kodi
+        description: Kodi media center
+        target: public
+        services:
+          - kodi-eventserver
+          - kodi-http
+          - kodi-jsonrpc
+
+    default_zone: Kodi
