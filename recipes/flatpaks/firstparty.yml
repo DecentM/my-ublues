@@ -25,3 +25,6 @@ modules:
         - org.kde.elisa
         - org.kde.marble
         - org.kde.kontact
+        - org.kde.kontrast
+        - org.kde.kasts
+        - org.kde.kwalletmanager5
