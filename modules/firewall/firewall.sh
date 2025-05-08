@@ -101,67 +101,6 @@ echo "$1" | jq -c '.custom_zones // [] | .[]' | while read -r zone; do
     } >"$ZONE_FILE"
 done
 
-# # Bind services to zones
-# echo "$1" | jq -c '.services // [] | .[]' | while read -r svc; do
-#     ZONE=$(echo "$svc" | jq -r '.zone')
-#     NAME=$(echo "$svc" | jq -r '.name')
-#     ENABLED=$(echo "$svc" | jq -r '.enabled')
-#     ensure_zone_file "$ZONE"
-#     ZONE_FILE="$ZONES_DIR/$ZONE.xml"
-
-#     if [ "$ENABLED" = "true" ]; then
-#         if ! grep -q "<service name=\"$NAME\"" "$ZONE_FILE"; then
-#             echo "Enabling service $NAME in zone $ZONE"
-#             sed -i "/<\/zone>/i \  <service name=\"$NAME\"/>" "$ZONE_FILE"
-#         fi
-#     else
-#         echo "Disabling service $NAME in zone $ZONE"
-#         # Remove matching service entry
-#         sed -i "/<service name=\"$NAME\"\/>/d" "$ZONE_FILE"
-#     fi
-# done
-
-# # Bind ports to zones
-# echo "$1" | jq -c '.ports // [] | .[]' | while read -r port; do
-#     ZONE=$(echo "$port" | jq -r '.zone')
-#     PORT=$(echo "$port" | jq -r '.port')
-#     PROTO=$(echo "$port" | jq -r '.protocol')
-#     ENABLED=$(echo "$port" | jq -r '.enabled')
-#     ensure_zone_file "$ZONE"
-#     ZONE_FILE="$ZONES_DIR/$ZONE.xml"
-
-#     if [ "$ENABLED" = "true" ]; then
-#         if ! grep -q "port=\"$PORT\" protocol=\"$PROTO\"" "$ZONE_FILE"; then
-#             echo "Enabling port $PORT/$PROTO in zone $ZONE"
-#             sed -i "/<\/zone>/i \  <port port=\"$PORT\" protocol=\"$PROTO\"/>" "$ZONE_FILE"
-#         fi
-#     else
-#         echo "Disabling port $PORT/$PROTO in zone $ZONE"
-#         # Remove matching port entry
-#         sed -i "/<port port=\"$PORT\" protocol=\"$PROTO\"\/>/d" "$ZONE_FILE"
-#     fi
-# done
-
-# # Bind interfaces to zones
-# echo "$1" | jq -c '.interfaces // [] | .[]' | while read -r iface; do
-#     ZONE=$(echo "$iface" | jq -r '.zone')
-#     INTERFACE=$(echo "$iface" | jq -r '.interface')
-#     ENABLED=$(echo "$iface" | jq -r '.enabled')
-#     ensure_zone_file "$ZONE"
-#     ZONE_FILE="$ZONES_DIR/$ZONE.xml"
-
-#     if [ "$ENABLED" = "true" ]; then
-#         if ! grep -q "<interface name=\"$INTERFACE\"" "$ZONE_FILE"; then
-#             echo "Enabling interface $INTERFACE in zone $ZONE"
-#             sed -i "/<\/zone>/i \  <interface name=\"$INTERFACE\"/>" "$ZONE_FILE"
-#         fi
-#     else
-#         echo "Disabling interface $INTERFACE in zone $ZONE"
-#         # Remove matching interface entry
-#         sed -i "/<interface name=\"$INTERFACE\"\/>/d" "$ZONE_FILE"
-#     fi
-# done
-
 # Set default zone
 echo "$1" | jq -r '.default_zone' | while read -r zone; do
     echo "Setting default zone to $zone"
