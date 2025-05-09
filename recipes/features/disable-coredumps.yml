@@ -1,0 +1,10 @@
+modules:
+  - type: files
+
+    files:
+      - source: disable-coredumps
+        destination:
+          / # copies files/system/* (* means everything inside it) into your image's root folder /
+          # put configuration files you want in /usr/etc/ inside the image
+          # while putting files in /etc/ is done on booted system by system administrators.
+          # read more about this in files module reference.

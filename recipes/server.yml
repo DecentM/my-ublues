@@ -22,5 +22,6 @@ modules:
   - from-file: features/raised-ulimits.yml
   - from-file: features/trust-custom-ca.yml
   - from-file: features/auto-blank-terminal.yml
+  - from-file: features/disable-coredumps.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

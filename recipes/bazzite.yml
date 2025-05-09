@@ -18,6 +18,7 @@ modules:
   - from-file: features/sshable.yml
   - from-file: features/trust-custom-ca.yml
   - from-file: features/trust-nextdns-ca.yml
+  - from-file: features/disable-coredumps.yml
 
   - from-file: flatpaks/firstparty.yml
 

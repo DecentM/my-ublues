@@ -20,6 +20,7 @@ modules:
   - from-file: features/zfs-load-key-service.yml
   - from-file: features/raised-ulimits.yml
   - from-file: features/auto-blank-terminal.yml
+  - from-file: features/disable-coredumps.yml
 
   - from-file: components/kubernetes.yml
   - from-file: components/nvidia-container-toolkit.yml
