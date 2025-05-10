@@ -36,26 +36,31 @@ jobs:
               - recipes/**/*
               - files/**/*
               - modules/**/*
+              - .github/workflows/*.yml
             _aurora:
               - recipes/_aurora.yml
               - recipes/**/*
               - files/**/*
               - modules/**/*
+              - .github/workflows/*.yml
             _bazzite-deck:
               - recipes/bazzite-deck.yml
               - recipes/**/*
               - files/**/*
               - modules/**/*
+              - .github/workflows/*.yml
             _server-zfs-nvidia:
               - recipes/_server-zfs-nvidia.yml
               - recipes/**/*
               - files/**/*
               - modules/**/*
+              - .github/workflows/*.yml
             _server:
               - recipes/_server.yml
               - recipes/**/*
               - files/**/*
               - modules/**/*
+              - .github/workflows/*.yml
 
   base-bluebuild:
     name: Build Bases
@@ -153,41 +158,49 @@ jobs:
               - recipes/**/*
               - files/**/*
               - modules/**/*
+              - .github/workflows/*.yml
             home-theatre:
               - recipes/home-theatre.yml
               - recipes/**/*
               - files/**/*
               - modules/**/*
+              - .github/workflows/*.yml
             k8s-node-zfs-nvidia:
               - recipes/k8s-node-zfs-nvidia.yml
               - recipes/**/*
               - files/**/*
               - modules/**/*
+              - .github/workflows/*.yml
             k8s-node:
               - recipes/k8s-node.yml
               - recipes/**/*
               - files/**/*
               - modules/**/*
+              - .github/workflows/*.yml
             laptop:
               - recipes/laptop.yml
               - recipes/**/*
               - files/**/*
               - modules/**/*
+              - .github/workflows/*.yml
             server:
               - recipes/server.yml
               - recipes/**/*
               - files/**/*
               - modules/**/*
+              - .github/workflows/*.yml
             workstation-nvidia:
               - recipes/workstation-nvidia.yml
               - recipes/**/*
               - files/**/*
               - modules/**/*
+              - .github/workflows/*.yml
             workstation:
               - recipes/workstation.yml
               - recipes/**/*
               - files/**/*
               - modules/**/*
+              - .github/workflows/*.yml
 
   image-bluebuild:
     name: Build Images
