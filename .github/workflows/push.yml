@@ -1,14 +1,9 @@
-name: build-and-publish
+name: push
 
 on:
   push:
     branches:
       - main
-
-  schedule:
-    - cron:
-        "00 06 * * TUE" # build at 06:00 UTC on Tuesdays
-        # (20 minutes after last ublue images start building)
 
 jobs:
   base-changes:
@@ -33,34 +28,54 @@ jobs:
           filters: |
             _aurora-nvidia:
               - recipes/_aurora-nvidia.yml
-              - recipes/**/*
+              - recipes/cleanup/aurora-dx.yml
+              - recipes/components/*
+              - recipes/features/*
+              - recipes/flatpaks/*
+              - recipes/tools/*
               - files/**/*
               - modules/**/*
-              - .github/workflows/*.yml
+              - .github/workflows/push.yml
             _aurora:
               - recipes/_aurora.yml
-              - recipes/**/*
+              - recipes/cleanup/aurora-dx.yml
+              - recipes/components/*
+              - recipes/features/*
+              - recipes/flatpaks/*
+              - recipes/tools/*
               - files/**/*
               - modules/**/*
-              - .github/workflows/*.yml
+              - .github/workflows/push.yml
             _bazzite-deck:
               - recipes/bazzite-deck.yml
-              - recipes/**/*
+              - recipes/cleanup/bazzite.yml
+              - recipes/components/*
+              - recipes/features/*
+              - recipes/flatpaks/*
+              - recipes/tools/*
               - files/**/*
               - modules/**/*
-              - .github/workflows/*.yml
+              - .github/workflows/push.yml
             _server-zfs-nvidia:
               - recipes/_server-zfs-nvidia.yml
-              - recipes/**/*
+              - recipes/cleanup/coreos.yml
+              - recipes/components/*
+              - recipes/features/*
+              - recipes/flatpaks/*
+              - recipes/tools/*
               - files/**/*
               - modules/**/*
-              - .github/workflows/*.yml
+              - .github/workflows/push.yml
             _server:
               - recipes/_server.yml
-              - recipes/**/*
+              - recipes/cleanup/coreos.yml
+              - recipes/components/*
+              - recipes/features/*
+              - recipes/flatpaks/*
+              - recipes/tools/*
               - files/**/*
               - modules/**/*
-              - .github/workflows/*.yml
+              - .github/workflows/push.yml
 
   base-bluebuild:
     name: Build Bases
@@ -155,52 +170,44 @@ jobs:
           filters: |
             bazzite-deck:
               - recipes/bazzite-deck.yml
-              - recipes/**/*
-              - files/**/*
-              - modules/**/*
-              - .github/workflows/*.yml
+              - .github/workflows/push.yml
             home-theatre:
               - recipes/home-theatre.yml
-              - recipes/**/*
-              - files/**/*
-              - modules/**/*
-              - .github/workflows/*.yml
+              - recipes/components/kodi.yml
+              - recipes/features/kodi-as-greeter.yml
+              - files/kodi-as-greeter/**/*
+              - .github/workflows/push.yml
             k8s-node-zfs-nvidia:
               - recipes/k8s-node-zfs-nvidia.yml
-              - recipes/**/*
-              - files/**/*
-              - modules/**/*
-              - .github/workflows/*.yml
+              - recipes/components/kubernetes.yml
+              - recipes/components/nvidia-container-toolkit.yml
+              - files/disable-selinux/**/*
+              - files/kubernetes/**/*
+              - .github/workflows/push.yml
             k8s-node:
               - recipes/k8s-node.yml
-              - recipes/**/*
-              - files/**/*
-              - modules/**/*
-              - .github/workflows/*.yml
+              - recipes/components/kubernetes.yml
+              - files/disable-selinux/**/*
+              - files/kubernetes/**/*
+              - .github/workflows/push.yml
             laptop:
               - recipes/laptop.yml
-              - recipes/**/*
-              - files/**/*
-              - modules/**/*
-              - .github/workflows/*.yml
+              - recipes/tools/tlp.yml
+              - .github/workflows/push.yml
             server:
               - recipes/server.yml
-              - recipes/**/*
-              - files/**/*
-              - modules/**/*
-              - .github/workflows/*.yml
+              - recipes/tools/git-ssh.yml
+              - .github/workflows/push.yml
             workstation-nvidia:
               - recipes/workstation-nvidia.yml
-              - recipes/**/*
-              - files/**/*
-              - modules/**/*
-              - .github/workflows/*.yml
+              - recipes/features/libvirt-hooks.yml
+              - files/libvirt-hooks/**/*
+              - .github/workflows/push.yml
             workstation:
               - recipes/workstation.yml
-              - recipes/**/*
-              - files/**/*
-              - modules/**/*
-              - .github/workflows/*.yml
+              - recipes/features/libvirt-hooks.yml
+              - files/libvirt-hooks/**/*
+              - .github/workflows/push.yml
 
   image-bluebuild:
     name: Build Images
