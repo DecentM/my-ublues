@@ -108,46 +108,6 @@ jobs:
           maximize_build_space: false
           rechunk: false
 
-  isos:
-    name: Build ISOs from images
-
-    runs-on: ubuntu-latest
-
-    permissions:
-      contents: read
-      packages: write
-      id-token: write
-
-    needs:
-      - base-bluebuild
-
-    steps:
-      - name: Build ISO
-        uses: jasonn3/build-container-installer@main
-        id: build
-        with:
-          arch: x86_64
-          enrollment_password: ${{ secrets.ENROLLMENT_PASSWORD }}
-          image_name: base-server
-          image_repo: ghcr.io/decentm
-          image_tag: latest
-          version: 42
-          iso_name: base-server-latest-x86_64.iso
-          variant: fedora-release-coreos-42-26.noarch
-          web_ui: false
-
-      - name: Upload ISO as artifact
-        id: upload
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ steps.build.outputs.iso_name }}
-          path: |
-            ${{ steps.build.outputs.iso_path }}
-            ${{ steps.build.outputs.iso_path }}-CHECKSUM
-          if-no-files-found: error
-          retention-days: 7
-          compression-level: 9
-
   image-changes:
     runs-on: ubuntu-latest
 
