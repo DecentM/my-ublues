@@ -1,11 +1,11 @@
 # image will be published to ghcr.io/<user>/<name>
-name: k8s-node-hci-zfs-nvidia
+name: base-server
 # description will be included in the image's metadata
-description: This is my personal OS image for nodes in my k8s cluster with Nvidia blobs.
+description: Server base image
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/ucore-hci
-image-version: stable-nvidia-zfs # latest is also supported if you want new updates ASAP
+base-image: ghcr.io/ublue-os/ucore-minimal
+image-version: stable # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -14,15 +14,14 @@ modules:
 
   - from-file: tools/general.yml
 
+  - from-file: features/wifi-drivers.yml
+  - from-file: features/disable-selinux.yml
   - from-file: features/dotfiles.yml
   - from-file: features/sshable.yml
   - from-file: features/no-suspend.yml
-  - from-file: features/zfs-load-key-service.yml
   - from-file: features/raised-ulimits.yml
+  - from-file: features/trust-custom-ca.yml
   - from-file: features/auto-blank-terminal.yml
   - from-file: features/disable-coredumps.yml
-
-  - from-file: components/kubernetes.yml
-  - from-file: components/nvidia-container-toolkit.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

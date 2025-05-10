@@ -1,0 +1,25 @@
+# image will be published to ghcr.io/<user>/<name>
+name: base-bazzite-deck
+# description will be included in the image's metadata
+description: Bazzite (Steam Deck) base image
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/bazzite-deck
+image-version: 42 # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - from-file: cleanup/bazzite.yml
+
+  - from-file: tools/general.yml
+
+  - from-file: features/dotfiles.yml
+  - from-file: features/sshable.yml
+  - from-file: features/trust-custom-ca.yml
+  - from-file: features/trust-nextdns-ca.yml
+  - from-file: features/disable-coredumps.yml
+
+  - from-file: flatpaks/firstparty.yml
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully

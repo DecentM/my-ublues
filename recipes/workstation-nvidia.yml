@@ -4,29 +4,12 @@ name: workstation-nvidia
 description: This is my personal OS image with Nvidia blobs.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/aurora-dx-nvidia
-image-version: 42 # latest is also supported if you want new updates ASAP
+base-image: ghcr.io/decentm/base-aurora-nvidia
+image-version: latest
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  # Cleanup
-  - from-file: cleanup/aurora-dx.yml
-
-  # Tools
-  - from-file: tools/general.yml
-  - from-file: tools/git-ssh.yml
-
-  # Software
-  - from-file: flatpaks/firstparty.yml
-  - from-file: flatpaks/thirdparty.yml
-
-  # Files
-  - from-file: features/sshable.yml
-  - from-file: features/dotfiles.yml
   - from-file: features/libvirt-hooks.yml
-  - from-file: features/trust-custom-ca.yml
-  - from-file: features/trust-nextdns-ca.yml
-  - from-file: features/disable-coredumps.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

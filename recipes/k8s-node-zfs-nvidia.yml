@@ -1,16 +1,16 @@
 # image will be published to ghcr.io/<user>/<name>
-name: home-theatre
+name: k8s-node-zfs-nvidia
 # description will be included in the image's metadata
-description: This is my personal OS image for home theatres that only runs Kodi.
+description: This is my personal OS image for nodes in my k8s cluster with Nvidia blobs.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/decentm/base-server
+base-image: ghcr.io/decentm/base-server-zfs-nvidia
 image-version: latest
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - from-file: components/kodi.yml
-  - from-file: features/kodi-as-greeter.yml
+  - from-file: components/kubernetes.yml
+  - from-file: components/nvidia-container-toolkit.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

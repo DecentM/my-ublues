@@ -1,0 +1,31 @@
+# image will be published to ghcr.io/<user>/<name>
+name: base-aurora
+# description will be included in the image's metadata
+description: Aurora base image
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/aurora-dx
+image-version: 42 # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  # Cleanup
+  - from-file: cleanup/aurora-dx.yml
+
+  # Tools
+  - from-file: tools/general.yml
+  - from-file: tools/git-ssh.yml
+
+  # Software
+  - from-file: flatpaks/firstparty.yml
+  - from-file: flatpaks/thirdparty.yml
+
+  # Features
+  - from-file: features/sshable.yml
+  - from-file: features/dotfiles.yml
+  - from-file: features/trust-custom-ca.yml
+  - from-file: features/trust-nextdns-ca.yml
+  - from-file: features/disable-coredumps.yml
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
