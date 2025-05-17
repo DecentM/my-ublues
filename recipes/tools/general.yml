@@ -10,3 +10,4 @@ modules:
       - vim
       - iotop
       - inxi
+      - pv
