@@ -91,7 +91,44 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    if: always()
+    needs:
+      - base-bluebuild
+
+    strategy:
+      fail-fast: false
+
+      matrix:
+        include:
+          - recipe: bazzite-deck
+          - recipe: home-theatre
+          - recipe: k8s-node-zfs-nvidia
+          - recipe: k8s-node
+          - recipe: laptop
+          - recipe: server
+          - recipe: workstation-nvidia
+          - recipe: workstation
+
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+
+    steps:
+      - name: Build Custom Image
+        uses: blue-build/github-action@v1.8.1
+        with:
+          recipe: ${{ matrix.recipe }}.yml
+          cosign_private_key: ${{ secrets.SIGNING_SECRET }}
+          registry_token: ${{ github.token }}
+          maximize_build_space: true
+          rechunk: true
+
+  image-bluebuild-skipped:
+    name: Build Images
+
+    runs-on: ubuntu-latest
+
+    if: ${{ github.event.inputs.skip_base == 'true' }}
 
     strategy:
       fail-fast: false
