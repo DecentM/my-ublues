@@ -11,3 +11,4 @@ modules:
       - iotop
       - inxi
       - pv
+      - unzip
