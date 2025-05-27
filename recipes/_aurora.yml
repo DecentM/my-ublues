@@ -13,9 +13,6 @@ modules:
   # Cleanup
   - from-file: cleanup/aurora-dx.yml
 
-  # Components
-  - from-file: components/plasma-widget-requirements.yml
-
   # Tools
   - from-file: tools/general.yml
   - from-file: tools/git-ssh.yml
