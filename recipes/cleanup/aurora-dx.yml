@@ -3,8 +3,6 @@ modules:
     remove:
       - ptyxis
       - p7zip
-      - code
-      - cascadia-code-fonts
       - cockpit-bridge
       - cockpit-machines
       - cockpit-networkmanager
@@ -23,5 +21,4 @@ modules:
       remove:
         - io.github.flattool.Warehouse
         - org.gnome.DejaDup
-        - org.kde.haruna
         - org.mozilla.Thunderbird
