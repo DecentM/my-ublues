@@ -13,4 +13,3 @@ modules:
       - plasma-discover
       - plasma-discover-flatpak
       - plasma-discover-notifier
-      - plasma-discover-offline-updates
