@@ -3,3 +3,14 @@ modules:
     remove:
       - nano
       - nano-default-editor
+      - bazaar
+      - krunner-bazaar
+      - gnome-disk-utility
+
+  - type: rpm-ostree
+    install:
+      - kde-partitionmanager
+      - plasma-discover
+      - plasma-discover-flatpak
+      - plasma-discover-notifier
+      - plasma-discover-offline-updates
