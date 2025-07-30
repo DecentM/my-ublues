@@ -15,7 +15,7 @@ modules:
       - nano
       - nano-default-editor
 
-  - type: default-flatpaks
+  - type: default-flatpaks@v1
     notify: false # Send notification after install/uninstall is finished (true/false)
     system:
       remove:
