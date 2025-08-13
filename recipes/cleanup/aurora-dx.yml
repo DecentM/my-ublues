@@ -14,6 +14,14 @@ modules:
       - android-tools
       - nano
       - nano-default-editor
+      - bazaar
+      - krunner-bazaar
+
+  - type: rpm-ostree
+    install:
+      - plasma-discover
+      - plasma-discover-flatpak
+      - plasma-discover-notifier
 
   - type: default-flatpaks@v1
     notify: false # Send notification after install/uninstall is finished (true/false)
