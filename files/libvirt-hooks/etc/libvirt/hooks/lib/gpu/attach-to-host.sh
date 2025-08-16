@@ -11,23 +11,19 @@ modprobe -r vfio_iommu_type1
 modprobe -r vfio-pci
 modprobe -r vfio
 
-# Load AMD kernel module
-#modprobe amdgpu
-
 # Rebind framebuffer to host
 echo "efi-framebuffer.0" >/sys/bus/platform/drivers/efi-framebuffer/bind
 
-# Load NVIDIA kernel modules
-# modprobe nvidia_drm
-# modprobe nvidia_modeset
-# modprobe nvidia_uvm
-# modprobe nvidia
+# Reload unloaded GPU drivers
+if [ -d /tmp/libvirt-hooks ]; then
+    while read -r module; do
+        if [ -n "$module" ]; then
+            modprobe "$module"
+        fi
+    done < /tmp/libvirt-hooks/unloaded-modules.txt
 
-modprobe nouveau
-
-# Bind VTconsoles: might not be needed
-#echo 1 >/sys/class/vtconsole/vtcon0/bind
-#echo 1 >/sys/class/vtconsole/vtcon1/bind
+    rm -rf /tmp/libvirt-hooks
+fi
 
 sleep 2
 

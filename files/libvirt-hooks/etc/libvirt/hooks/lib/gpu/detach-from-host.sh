@@ -6,20 +6,27 @@ systemctl isolate multi-user.target
 
 sleep 2
 
-# Unbind VTconsoles: might not be needed
-#echo 0 >/sys/class/vtconsole/vtcon0/bind
-#echo 0 >/sys/class/vtconsole/vtcon1/bind
-
 # Unbind EFI Framebuffer
 echo efi-framebuffer.0 >/sys/bus/platform/drivers/efi-framebuffer/unbind
 
-# Unload NVIDIA kernel modules
-# modprobe -r nvidia_drm nvidia_modeset nvidia_uvm nvidia
+if [ -d /tmp/libvirt-hooks ]; then
+    rm -rf /tmp/libvirt-hooks
+fi
 
-# Unload AMD kernel module
-# modprobe -r amdgpu
+mkdir -p /tmp/libvirt-hooks
 
-modprobe -r nouveau
+{
+    lsmod | cut -d ' ' -f1 | grep nvidia
+    lsmod | cut -d ' ' -f1 | grep amdgpu
+    lsmod | cut -d ' ' -f1 | grep nouveau
+} >>/tmp/libvirt-hooks/unloaded-modules.txt
+
+# Unload GPU drivers from the file
+while read -r module; do
+    if [ -n "$module" ]; then
+        modprobe -r "$module"
+    fi
+done < /tmp/libvirt-hooks/unloaded-modules.txt
 
 # Detach GPU devices from host
 # Use your GPU and HDMI Audio PCI host device
