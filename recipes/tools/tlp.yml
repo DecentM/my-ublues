@@ -1,6 +1,0 @@
-modules:
-  - type: rpm-ostree
-
-    install:
-      - tlp
-      - tlp-rdw

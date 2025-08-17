@@ -150,10 +150,6 @@ jobs:
               - files/disable-selinux/**/*
               - files/kubernetes/**/*
               - .github/workflows/push.yml
-            laptop:
-              - recipes/laptop.yml
-              - recipes/tools/tlp.yml
-              - .github/workflows/push.yml
             server:
               - recipes/server.yml
               - recipes/tools/git-ssh.yml
