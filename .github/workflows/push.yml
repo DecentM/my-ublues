@@ -46,6 +46,15 @@ jobs:
               - files/**/*
               - modules/**/*
               - .github/workflows/push.yml
+            _kinoite:
+              - recipes/_kinoite.yml
+              - recipes/components/*
+              - recipes/features/*
+              - recipes/flatpaks/*
+              - recipes/tools/*
+              - files/**/*
+              - modules/**/*
+              - .github/workflows/push.yml
             _bazzite-deck:
               - recipes/bazzite-deck.yml
               - recipes/cleanup/bazzite.yml
@@ -161,6 +170,11 @@ jobs:
               - .github/workflows/push.yml
             workstation:
               - recipes/workstation.yml
+              - recipes/features/libvirt-hooks.yml
+              - files/libvirt-hooks/**/*
+              - .github/workflows/push.yml
+            workstation-kinoite:
+              - recipes/workstation-kinoite.yml
               - recipes/features/libvirt-hooks.yml
               - files/libvirt-hooks/**/*
               - .github/workflows/push.yml
