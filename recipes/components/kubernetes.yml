@@ -13,9 +13,9 @@ modules:
       - firewalld
     install:
       - kubelet
-      - kubeadm
+      - kubernetes1.31-kubeadm
       - kubectl
-      - cri-o
+      - cri-o1.32
 
   - type: systemd
     system:
