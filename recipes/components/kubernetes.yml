@@ -4,9 +4,6 @@ modules:
     files:
       - source: disable-selinux
         destination: /
-
-  - type: files
-    files:
       - source: kubernetes
         destination: /
 
