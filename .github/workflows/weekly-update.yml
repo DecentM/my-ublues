@@ -2,7 +2,7 @@ name: weekly-update
 
 on:
   schedule:
-    - cron: "00 06 * * TUE"
+    - cron: "00 06 * * TUE,FRI"
 
   workflow_dispatch:
     inputs:
