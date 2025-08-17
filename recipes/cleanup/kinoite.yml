@@ -1,0 +1,8 @@
+modules:
+  - type: rpm-ostree
+    remove:
+      - fedora-bookmarks
+      - fedora-chromium-config
+      - fedora-chromium-config-kde
+      - firefox
+      - firefox-langpacks

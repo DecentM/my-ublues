@@ -48,6 +48,7 @@ jobs:
               - .github/workflows/push.yml
             _kinoite:
               - recipes/_kinoite.yml
+              - recipes/cleanup/kinoite.yml
               - recipes/components/*
               - recipes/features/*
               - recipes/flatpaks/*
