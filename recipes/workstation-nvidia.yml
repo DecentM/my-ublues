@@ -10,6 +10,4 @@ image-version: latest
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - from-file: features/libvirt-hooks.yml
-
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

@@ -12,7 +12,7 @@ image-version: 42 # latest is also supported if you want new updates ASAP
 modules:
   - from-file: cleanup/bazzite.yml
 
-  - from-file: tools/general.yml
+  - from-file: components/general-tools.yml
 
   - from-file: features/dotfiles.yml
   - from-file: features/sshable.yml

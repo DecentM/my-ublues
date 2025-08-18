@@ -13,8 +13,13 @@ modules:
   - from-file: cleanup/kinoite.yml
 
   # Tools
-  - from-file: tools/general.yml
-  - from-file: tools/git-ssh.yml
+  - from-file: components/general-tools.yml
+  - from-file: components/sshpass.yml
+  - from-file: components/tailscale.yml
+  - from-file: components/nerd-fonts.yml
+  - from-file: components/docker.yml
+  - from-file: components/podman.yml
+  - from-file: components/distrobox.yml
 
   # Software
   - from-file: flatpaks/firstparty.yml
@@ -26,5 +31,6 @@ modules:
   - from-file: features/trust-custom-ca.yml
   - from-file: features/trust-nextdns-ca.yml
   - from-file: features/disable-coredumps.yml
+  - from-file: features/libvirt-hooks.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

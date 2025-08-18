@@ -18,8 +18,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          # This may save additional git fetch roundtrip if
-          # merge-base is found within latest 20 commits
           fetch-depth: 20
 
       - uses: dorny/paths-filter@v3
@@ -130,8 +128,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          # This may save additional git fetch roundtrip if
-          # merge-base is found within latest 20 commits
           fetch-depth: 20
 
       - uses: dorny/paths-filter@v3
@@ -162,7 +158,7 @@ jobs:
               - .github/workflows/push.yml
             server:
               - recipes/server.yml
-              - recipes/tools/git-ssh.yml
+              - recipes/components/sshpass.yml
               - .github/workflows/push.yml
             workstation-nvidia:
               - recipes/workstation-nvidia.yml
