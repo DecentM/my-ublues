@@ -27,6 +27,7 @@ jobs:
         include:
           - recipe: _aurora-nvidia
           - recipe: _aurora
+          - recipe: _kinoite
           - recipe: _bazzite-deck
           - recipe: _server-zfs-nvidia
           - recipe: _server
@@ -139,7 +140,6 @@ jobs:
           - recipe: home-theatre
           - recipe: k8s-node-zfs-nvidia
           - recipe: k8s-node
-          - recipe: laptop
           - recipe: server
           - recipe: workstation-nvidia
           - recipe: workstation
