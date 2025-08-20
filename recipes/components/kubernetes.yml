@@ -12,9 +12,9 @@ modules:
       - zram-generator
       - firewalld
     install:
-      - kubernetes1.31
-      - kubernetes1.31-kubeadm
-      - kubernetes1.31-client
+      - kubernetes1.32
+      - kubernetes1.32-kubeadm
+      - kubernetes1.32-client
       - cri-o1.32
 
   - type: systemd
