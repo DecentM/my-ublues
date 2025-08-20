@@ -20,6 +20,8 @@ modules:
   - from-file: components/docker.yml
   - from-file: components/podman.yml
   - from-file: components/distrobox.yml
+  - from-file: components/virtualisation.yml
+  - from-file: components/aurora-packages.yml
 
   # Software
   - from-file: flatpaks/firstparty.yml
