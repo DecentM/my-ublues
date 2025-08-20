@@ -103,10 +103,10 @@ jobs:
           - recipe: home-theatre
           - recipe: k8s-node-zfs-nvidia
           - recipe: k8s-node
-          - recipe: laptop
           - recipe: server
           - recipe: workstation-nvidia
           - recipe: workstation
+          - recipe: workstation-kinoite
 
     permissions:
       contents: read
@@ -143,6 +143,7 @@ jobs:
           - recipe: server
           - recipe: workstation-nvidia
           - recipe: workstation
+          - recipe: workstation-kinoite
 
     permissions:
       contents: read

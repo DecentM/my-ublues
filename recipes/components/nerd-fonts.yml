@@ -9,7 +9,5 @@ modules:
       - google-droid-sans-mono-fonts
       - google-go-mono-fonts
       - ibm-plex-mono-fonts
-      - nerdfontssymbolsonly-nerd-fonts
       - jetbrains-mono-fonts-all
-      - firacode-nerd-fonts
       - rsms-inter-fonts
