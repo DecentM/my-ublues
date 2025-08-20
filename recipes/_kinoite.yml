@@ -13,15 +13,15 @@ modules:
   - from-file: cleanup/kinoite.yml
 
   # Tools
-  - from-file: components/general-tools.yml
-  - from-file: components/sshpass.yml
-  - from-file: components/tailscale.yml
-  - from-file: components/nerd-fonts.yml
-  - from-file: components/docker.yml
-  - from-file: components/podman.yml
-  - from-file: components/distrobox.yml
-  - from-file: components/virtualisation.yml
-  - from-file: components/aurora-packages.yml
+  - from-file: packages/general-tools.yml
+  - from-file: packages/sshpass.yml
+  - from-file: packages/tailscale.yml
+  - from-file: packages/nerd-fonts.yml
+  - from-file: packages/docker.yml
+  - from-file: packages/podman.yml
+  - from-file: packages/distrobox.yml
+  - from-file: packages/virtualisation.yml
+  - from-file: packages/aurora-packages.yml
 
   # Software
   - from-file: flatpaks/firstparty.yml

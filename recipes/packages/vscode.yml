@@ -1,0 +1,13 @@
+modules:
+  - type: rpm-ostree
+    install:
+      - perf
+      - binutils
+
+  - type: default-flatpaks@v1
+
+    notify: true # Send notification after install/uninstall is finished (true/false)
+
+    system:
+      install:
+        - com.visualstudio.code

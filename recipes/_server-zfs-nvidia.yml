@@ -12,7 +12,7 @@ image-version: stable-nvidia-zfs # latest is also supported if you want new upda
 modules:
   - from-file: cleanup/coreos.yml
 
-  - from-file: components/general-tools.yml
+  - from-file: packages/general-tools.yml
 
   - from-file: features/wifi-drivers.yml
   - from-file: features/disable-selinux.yml

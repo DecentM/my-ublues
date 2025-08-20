@@ -12,7 +12,8 @@ image-version: stable # latest is also supported if you want new updates ASAP
 modules:
   - from-file: cleanup/coreos.yml
 
-  - from-file: components/general-tools.yml
+  - from-file: packages/general-tools.yml
+  - from-file: packages/vscode.yml
 
   - from-file: features/wifi-drivers.yml
   - from-file: features/disable-selinux.yml

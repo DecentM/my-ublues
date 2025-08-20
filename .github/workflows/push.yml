@@ -27,7 +27,7 @@ jobs:
             _aurora-nvidia:
               - recipes/_aurora-nvidia.yml
               - recipes/cleanup/aurora-dx.yml
-              - recipes/components/*
+              - recipes/packages/*
               - recipes/features/*
               - recipes/flatpaks/*
               - recipes/tools/*
@@ -37,7 +37,7 @@ jobs:
             _aurora:
               - recipes/_aurora.yml
               - recipes/cleanup/aurora-dx.yml
-              - recipes/components/*
+              - recipes/packages/*
               - recipes/features/*
               - recipes/flatpaks/*
               - recipes/tools/*
@@ -47,7 +47,7 @@ jobs:
             _kinoite:
               - recipes/_kinoite.yml
               - recipes/cleanup/kinoite.yml
-              - recipes/components/*
+              - recipes/packages/*
               - recipes/features/*
               - recipes/flatpaks/*
               - recipes/tools/*
@@ -57,7 +57,7 @@ jobs:
             _bazzite-deck:
               - recipes/bazzite-deck.yml
               - recipes/cleanup/bazzite.yml
-              - recipes/components/*
+              - recipes/packages/*
               - recipes/features/*
               - recipes/flatpaks/*
               - recipes/tools/*
@@ -67,7 +67,7 @@ jobs:
             _server-zfs-nvidia:
               - recipes/_server-zfs-nvidia.yml
               - recipes/cleanup/coreos.yml
-              - recipes/components/*
+              - recipes/packages/*
               - recipes/features/*
               - recipes/flatpaks/*
               - recipes/tools/*
@@ -77,7 +77,7 @@ jobs:
             _server:
               - recipes/_server.yml
               - recipes/cleanup/coreos.yml
-              - recipes/components/*
+              - recipes/packages/*
               - recipes/features/*
               - recipes/flatpaks/*
               - recipes/tools/*
@@ -139,41 +139,35 @@ jobs:
               - .github/workflows/push.yml
             home-theatre:
               - recipes/home-theatre.yml
-              - recipes/components/kodi.yml
+              - recipes/packages/kodi.yml
               - recipes/features/kodi-as-greeter.yml
               - files/kodi-as-greeter/**/*
               - .github/workflows/push.yml
             k8s-node-zfs-nvidia:
               - recipes/k8s-node-zfs-nvidia.yml
-              - recipes/components/kubernetes.yml
-              - recipes/components/nvidia-container-toolkit.yml
+              - recipes/packages/kubernetes.yml
+              - recipes/packages/nvidia-container-toolkit.yml
               - files/disable-selinux/**/*
               - files/kubernetes/**/*
               - .github/workflows/push.yml
             k8s-node:
               - recipes/k8s-node.yml
-              - recipes/components/kubernetes.yml
+              - recipes/packages/kubernetes.yml
               - files/disable-selinux/**/*
               - files/kubernetes/**/*
               - .github/workflows/push.yml
             server:
               - recipes/server.yml
-              - recipes/components/sshpass.yml
+              - recipes/packages/sshpass.yml
               - .github/workflows/push.yml
             workstation-nvidia:
               - recipes/workstation-nvidia.yml
-              - recipes/features/libvirt-hooks.yml
-              - files/libvirt-hooks/**/*
               - .github/workflows/push.yml
             workstation:
               - recipes/workstation.yml
-              - recipes/features/libvirt-hooks.yml
-              - files/libvirt-hooks/**/*
               - .github/workflows/push.yml
             workstation-kinoite:
               - recipes/workstation-kinoite.yml
-              - recipes/features/libvirt-hooks.yml
-              - files/libvirt-hooks/**/*
               - .github/workflows/push.yml
 
   image-bluebuild:

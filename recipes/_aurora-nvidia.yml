@@ -14,8 +14,8 @@ modules:
   - from-file: cleanup/aurora-dx.yml
 
   # Tools
-  - from-file: components/general-tools.yml
-  - from-file: components/sshpass.yml
+  - from-file: packages/general-tools.yml
+  - from-file: packages/sshpass.yml
 
   # Software
   - from-file: flatpaks/firstparty.yml

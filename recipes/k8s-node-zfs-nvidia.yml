@@ -10,7 +10,7 @@ image-version: latest
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - from-file: components/kubernetes.yml
-  - from-file: components/nvidia-container-toolkit.yml
+  - from-file: packages/kubernetes.yml
+  - from-file: packages/nvidia-container-toolkit.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
