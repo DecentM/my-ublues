@@ -11,9 +11,7 @@ modules:
         - com.anydesk.Anydesk
         - com.bitwarden.desktop
         - com.discordapp.Discord
-        - com.stremio.Stremio
         - org.fkoehler.KTailctl
-        - io.github.slgobinath.SafeEyes
         - net.cozic.joplin_desktop
         - app.zen_browser.zen
         - org.signal.Signal
@@ -23,5 +21,4 @@ modules:
         - org.fedoraproject.MediaWriter
         - com.slack.Slack
         - io.dbeaver.DBeaverCommunity
-        - us.zoom.Zoom
         - org.libreoffice.LibreOffice
