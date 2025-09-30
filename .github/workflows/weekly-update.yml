@@ -44,7 +44,7 @@ jobs:
           recipe: ${{ matrix.recipe }}.yml
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
           registry_token: ${{ github.token }}
-          maximize_build_space: false
+          maximize_build_space: true
           rechunk: false
 
   isos:
