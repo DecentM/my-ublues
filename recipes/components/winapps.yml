@@ -9,4 +9,3 @@ modules:
       - libnotify
       - nmap-ncat
       - freerdp
-
