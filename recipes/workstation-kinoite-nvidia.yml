@@ -1,10 +1,10 @@
 # image will be published to ghcr.io/<user>/<name>
-name: workstation-kinoite
+name: workstation-kinoite-nvidia
 # description will be included in the image's metadata
-description: This is my personal OS image with nouveau (experimental Kinoite version)
+description: This is my personal OS image with Nvidia (experimental Kinoite version)
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/decentm/base-kinoite
+base-image: ghcr.io/decentm/base-kinoite-nvidia
 image-version: latest
 
 # module configuration, executed in order

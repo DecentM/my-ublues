@@ -54,6 +54,16 @@ jobs:
               - files/**/*
               - modules/**/*
               - .github/workflows/push.yml
+            _kinoite-nvidia:
+              - recipes/_kinoite-nvidia.yml
+              - recipes/cleanup/kinoite.yml
+              - recipes/packages/*
+              - recipes/features/*
+              - recipes/flatpaks/*
+              - recipes/tools/*
+              - files/**/*
+              - modules/**/*
+              - .github/workflows/push.yml
             _bazzite-deck:
               - recipes/bazzite-deck.yml
               - recipes/cleanup/bazzite.yml
@@ -168,6 +178,9 @@ jobs:
               - .github/workflows/push.yml
             workstation-kinoite:
               - recipes/workstation-kinoite.yml
+              - .github/workflows/push.yml
+            workstation-kinoite-nvidia:
+              - recipes/workstation-kinoite-nvidia.yml
               - .github/workflows/push.yml
 
   image-bluebuild:

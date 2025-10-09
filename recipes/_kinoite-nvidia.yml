@@ -1,10 +1,10 @@
 # image will be published to ghcr.io/<user>/<name>
-name: base-kinoite
+name: base-kinoite-nvidia
 # description will be included in the image's metadata
-description: Kinoite base image
+description: Kinoite base image with Nvidia drivers
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/kinoite-main
+base-image: ghcr.io/ublue-os/kinoite-nvidia
 image-version: 42 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order

@@ -28,6 +28,7 @@ jobs:
           - recipe: _aurora-nvidia
           - recipe: _aurora
           - recipe: _kinoite
+          - recipe: _kinoite-nvidia
           - recipe: _bazzite-deck
           - recipe: _server-zfs-nvidia
           - recipe: _server
@@ -108,6 +109,7 @@ jobs:
           - recipe: workstation-nvidia
           - recipe: workstation
           - recipe: workstation-kinoite
+          - recipe: workstation-kinoite-nvidia
 
     permissions:
       contents: read
@@ -144,6 +146,7 @@ jobs:
           - recipe: workstation-nvidia
           - recipe: workstation
           - recipe: workstation-kinoite
+          - recipe: workstation-kinoite-nvidia
 
     permissions:
       contents: read
