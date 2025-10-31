@@ -24,26 +24,6 @@ jobs:
         id: filter
         with:
           filters: |
-            _aurora-nvidia:
-              - recipes/_aurora-nvidia.yml
-              - recipes/cleanup/aurora-dx.yml
-              - recipes/packages/*
-              - recipes/features/*
-              - recipes/flatpaks/*
-              - recipes/tools/*
-              - files/**/*
-              - modules/**/*
-              - .github/workflows/push.yml
-            _aurora:
-              - recipes/_aurora.yml
-              - recipes/cleanup/aurora-dx.yml
-              - recipes/packages/*
-              - recipes/features/*
-              - recipes/flatpaks/*
-              - recipes/tools/*
-              - files/**/*
-              - modules/**/*
-              - .github/workflows/push.yml
             _kinoite:
               - recipes/_kinoite.yml
               - recipes/cleanup/kinoite.yml
@@ -123,7 +103,7 @@ jobs:
           recipe: ${{ matrix.recipe }}.yml
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
           registry_token: ${{ github.token }}
-          maximize_build_space: false
+          maximize_build_space: true
           rechunk: false
 
   image-changes:
@@ -147,12 +127,6 @@ jobs:
             bazzite-deck:
               - recipes/bazzite-deck.yml
               - .github/workflows/push.yml
-            home-theatre:
-              - recipes/home-theatre.yml
-              - recipes/packages/kodi.yml
-              - recipes/features/kodi-as-greeter.yml
-              - files/kodi-as-greeter/**/*
-              - .github/workflows/push.yml
             k8s-node-zfs-nvidia:
               - recipes/k8s-node-zfs-nvidia.yml
               - recipes/packages/kubernetes.yml
@@ -169,12 +143,6 @@ jobs:
             server:
               - recipes/server.yml
               - recipes/packages/sshpass.yml
-              - .github/workflows/push.yml
-            workstation-nvidia:
-              - recipes/workstation-nvidia.yml
-              - .github/workflows/push.yml
-            workstation:
-              - recipes/workstation.yml
               - .github/workflows/push.yml
             workstation-kinoite:
               - recipes/workstation-kinoite.yml
