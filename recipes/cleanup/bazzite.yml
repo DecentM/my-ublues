@@ -13,6 +13,7 @@ modules:
       - plasma-discover
       - plasma-discover-flatpak
       - plasma-discover-notifier
+      - plasma-discover-kns
 
   - type: rpm-ostree
     remove:

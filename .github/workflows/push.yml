@@ -127,6 +127,11 @@ jobs:
             bazzite-deck:
               - recipes/bazzite-deck.yml
               - .github/workflows/push.yml
+            bazzite-deck-touch:
+              - recipes/bazzite-deck-touch.yml
+              - cleanup/bazzite-desktop-ui.yml
+              - packages/plasma-mobile.yml
+              - .github/workflows/push.yml
             k8s-node-zfs-nvidia:
               - recipes/k8s-node-zfs-nvidia.yml
               - recipes/packages/kubernetes.yml

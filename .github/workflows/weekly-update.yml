@@ -134,6 +134,7 @@ jobs:
       matrix:
         include:
           - recipe: bazzite-deck
+          - recipe: bazzite-deck-touch
           - recipe: k8s-node-zfs-nvidia
           - recipe: k8s-node
           - recipe: server

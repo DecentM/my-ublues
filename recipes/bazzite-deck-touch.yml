@@ -1,16 +1,17 @@
 # image will be published to ghcr.io/<user>/<name>
-name: home-theatre
+name: bazzite-deck-touch
 # description will be included in the image's metadata
-description: This is my personal OS image for home theatres that only runs Kodi.
+description: This is my personal OS image for the Steam Deck (touch UI)
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/decentm/base-server
+base-image: ghcr.io/decentm/base-bazzite-deck
 image-version: latest
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - from-file: packages/kodi.yml
-  - from-file: features/kodi-as-greeter.yml
+  - from-file: cleanup/bazzite-desktop-ui.yml
+
+  - from-file: packages/plasma-mobile.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
