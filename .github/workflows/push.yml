@@ -47,6 +47,7 @@ jobs:
             _bazzite-deck:
               - recipes/bazzite-deck.yml
               - recipes/cleanup/bazzite.yml
+              - recipes/cleanup/bazzite-desktop-ui.yml
               - recipes/packages/*
               - recipes/features/*
               - recipes/flatpaks/*
