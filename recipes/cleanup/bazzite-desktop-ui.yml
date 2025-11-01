@@ -1,4 +1,9 @@
 modules:
   - type: rpm-ostree
     remove:
+      - plasma-desktop
+      - plasma-lookandfeel-fedora
+      - plasma-print-manager-libs
+      - plasma-print-manager
+      - sddm-breeze
       - plasma-workspace
