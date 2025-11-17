@@ -69,9 +69,9 @@ jobs:
           image_name: base-server
           image_repo: ghcr.io/decentm
           image_tag: latest
-          version: 42
+          version: 43
           iso_name: base-server-latest-x86_64.iso
-          variant: fedora-release-coreos-42-26.noarch
+          variant: fedora-release-coreos-43-25.noarch # dnf provides system-release
           web_ui: false
 
       - name: Upload ISO as artifact
