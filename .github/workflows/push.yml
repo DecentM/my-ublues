@@ -132,6 +132,7 @@ jobs:
               - recipes/bazzite-deck-touch.yml
               - cleanup/bazzite-desktop-ui.yml
               - packages/plasma-mobile.yml
+              - files/bazzite-mobile-autologin/**/*
               - .github/workflows/push.yml
             k8s-node-zfs-nvidia:
               - recipes/k8s-node-zfs-nvidia.yml
