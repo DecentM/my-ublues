@@ -4,7 +4,6 @@ modules:
       - cascadia-code-nf-fonts
       - powerline-fonts
       - adobe-source-code-pro-fonts
-      - mozilla-fira-mono-fonts
       - intel-one-mono-fonts
       - google-droid-sans-mono-fonts
       - google-go-mono-fonts
