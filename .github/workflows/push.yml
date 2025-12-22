@@ -99,7 +99,7 @@ jobs:
 
     steps:
       - name: Build Custom Image
-        uses: blue-build/github-action@v1.9.1
+        uses: blue-build/github-action@v1.10.3
         with:
           recipe: ${{ matrix.recipe }}.yml
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
@@ -182,7 +182,7 @@ jobs:
 
     steps:
       - name: Build Custom Image
-        uses: blue-build/github-action@v1.9.1
+        uses: blue-build/github-action@v1.10.3
         with:
           recipe: ${{ matrix.recipe }}.yml
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
