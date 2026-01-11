@@ -52,7 +52,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: read
+      contents: write
       packages: write
       id-token: write
 
@@ -96,13 +96,14 @@ jobs:
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
 
       - name: Create release
-        uses: meeDamian/github-release@v2
+        uses: comnoco/create-release-action@v2.0.5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ steps.release_tag.outputs.tag }}
+          tag_name: ${{ steps.release_tag.outputs.tag }}
 
       - name: Upload ISO
-        uses: svenstaro/upload-release-action@v2
+        uses: svenstaro/upload-release-action@2.11.3
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ steps.release_tag.outputs.tag }}
