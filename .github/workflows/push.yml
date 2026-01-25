@@ -55,8 +55,8 @@ jobs:
               - files/**/*
               - modules/**/*
               - .github/workflows/push.yml
-            _server-zfs-nvidia:
-              - recipes/_server-zfs-nvidia.yml
+            _server-zfs:
+              - recipes/_server-zfs.yml
               - recipes/cleanup/coreos.yml
               - recipes/packages/*
               - recipes/features/*
@@ -134,10 +134,9 @@ jobs:
               - packages/plasma-mobile.yml
               - files/bazzite-mobile-autologin/**/*
               - .github/workflows/push.yml
-            k8s-node-zfs-nvidia:
-              - recipes/k8s-node-zfs-nvidia.yml
+            k8s-node-zfs:
+              - recipes/k8s-node-zfs.yml
               - recipes/packages/kubernetes.yml
-              - recipes/packages/nvidia-container-toolkit.yml
               - files/disable-selinux/**/*
               - files/kubernetes/**/*
               - .github/workflows/push.yml
