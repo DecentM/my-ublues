@@ -12,3 +12,4 @@ modules:
       - inxi
       - pv
       - unzip
+      - smartmontools
