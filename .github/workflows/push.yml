@@ -187,4 +187,4 @@ jobs:
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
           registry_token: ${{ github.token }}
           maximize_build_space: true
-          rechunk: true
+          rechunk: false
