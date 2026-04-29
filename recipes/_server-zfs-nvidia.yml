@@ -1,11 +1,11 @@
 # image will be published to ghcr.io/<user>/<name>
-name: base-server-zfs
+name: base-server-zfs-nvidia
 # description will be included in the image's metadata
-description: Server base image with ZFS support
+description: Server base image with ZFS support and NVIDIA drivers
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/ucore-minimal
-image-version: stable
+image-version: stable-nvidia
 
 # module configuration, executed in order
 # you can include multiple instances of the same module

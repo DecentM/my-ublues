@@ -28,6 +28,7 @@ jobs:
           - recipe: _kinoite
           - recipe: _kinoite-nvidia
           - recipe: _bazzite-deck
+          - recipe: _server-zfs-nvidia
           - recipe: _server-zfs
           - recipe: _server
 
@@ -61,6 +62,7 @@ jobs:
         include:
           - recipe: bazzite-deck
           - recipe: bazzite-deck-touch
+          - recipe: k8s-node-zfs-nvidia
           - recipe: k8s-node-zfs
           - recipe: k8s-node
           - recipe: server
@@ -96,6 +98,7 @@ jobs:
         include:
           - recipe: bazzite-deck
           - recipe: bazzite-deck-touch
+          - recipe: k8s-node-zfs-nvidia
           - recipe: k8s-node-zfs
           - recipe: k8s-node
           - recipe: server
